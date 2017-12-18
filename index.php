@@ -15,6 +15,7 @@
     <!-- Custom styles for this template -->
     <link href="./assets/css/justified-nav.css" rel="stylesheet">
     <link href="./assets/css/theme.css" rel="stylesheet">
+    <link href="./assets/css/app.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <!-- https://coolors.co/f48e40-0fa3b1-d9e5d6-eddea4-838486 -->
@@ -66,9 +67,9 @@
 
         <!-- Jumbotron -->
         <div class="jumbotron">
-          <h1>Marketing stuff!</h1>
+          <h1>Ti tha ginei marxo?!</h1>
           <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
-          <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>
+          <p><a class="btn btn-lg btn-info" href="#" role="button">Get started today</a></p>
         </div>
 
         <!-- Example row of columns -->
@@ -94,7 +95,7 @@
 
       <!-- Site footer -->
       <footer class="footer">
-        <p>&copy; Company 2017</p>
+        <p>&copy; ika.gr 2017</p>
       </footer>
 
     </div> <!-- /container -->
