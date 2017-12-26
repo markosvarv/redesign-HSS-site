@@ -1,7 +1,7 @@
 <h2>1. σεταρω την PHP</h2>
 sudo apt-get update <br/>
 sudo apt-get install apache2<br/>
-sudo apt-get install mysql-server (* opou zitisi kodika apla patame enter)<br/>
+sudo apt-get install mysql-server (* οπου θέλει κωδικό απλα πατάμε enter)<br/>
 sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql<br/>
 
 <h2>2. κατεβάζω το project απο το bitbucket</h2>
