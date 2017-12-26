@@ -9,7 +9,7 @@ cd ~/Documents && git clone https://spavl@bitbucket.org/spavl/ika.git <br/>
 
 <h2>3. server settings</h2>
 sudo nano /etc/apache2/sites-enabled/000-default.conf <br/>
-ΠΡΙΝ ΤΟ &lt;virtualHost&gt; προσθέτω τά <br/>
+ΠΡΙΝ ΤΟ &lt;/virtualHost&gt; (κατω κατω) προσθέτω τά <br/>
 <pre>
 	&lt;Directory /&gt;
 	    Options FollowSymLinks
