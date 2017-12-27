@@ -1,0 +1,26 @@
+html {
+	font-size: 14px;
+}
+
+.right-tools{
+	/*width: 500px;*/
+	height: 50px;
+	padding-bottom: 5px;
+}
+#access{
+	display: inline-block;
+	margin-left:20px;
+	float: right;
+}
+#access input{
+	display: inline;
+	width: 50px;
+	line-height: 20px;
+	vertical-align: bottom;
+}
+
+@media (max-width: 767px) {
+  #phone_and_email {
+	display: none;
+	}
+}
