@@ -30,7 +30,7 @@
 
   <body>
 
-    <div class="container">
+    <div class="container" id="body">
 
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->

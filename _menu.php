@@ -1,5 +1,5 @@
 <div class="right-tools pull-right">
-  <span id="access">Μέγεθος Γραμμάτων <input  type="range" min="1" max="2" value="1" step="0.5" onchange="$('body').attr('style', 'font-size: ' + (this.value*100).toString() + '% !important');" ></span>
+  <span id="access">Μέγεθος Γραμμάτων <input  type="range" min="1" max="2" value="1" step="0.5" onchange="$('#body').attr('style', 'font-size: ' + (this.value*100).toString() + '% !important');" ></span>
   <span id="access">Φωνητική Λειτουργία <span style="cursor: pointer;" class="glyphicon glyphicon-headphones"></span></span>
   <br>
   <span class="pull-right" style="border: solid 1px;padding: 5px;"> 
