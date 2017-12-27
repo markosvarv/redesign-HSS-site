@@ -30,12 +30,12 @@
 
   <body>
 
-    <div class="container" id="body">
+    <div class="container">
 
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
       <?php include('./_menu.php'); ?>
-
+      <div id="body">
       <!-- Jumbotron -->
       <div class="jumbotron">
         <h1>Marketing stuff!</h1>
@@ -63,6 +63,7 @@
         </div>
       </div>
 
+      </div>
       <?php include('./_footer.php'); ?>
   </body>
 </html>
