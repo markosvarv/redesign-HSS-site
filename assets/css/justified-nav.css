@@ -11,12 +11,16 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
-  text-align: center;
+  text-align: left;
   background-color: transparent;
 }
-.jumbotron .btn {
+.jumbotron .btn, .jumbotron input{
   padding: 14px 24px;
   font-size: 21px;
+  height: 60px;
+}
+.jumbotron h1{
+  font-size: 48px !important;
 }
 
 /*/* Customize the nav-justified links to be fill the entire space of the .navbar */

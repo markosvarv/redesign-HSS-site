@@ -23,7 +23,7 @@ sudo nano /etc/apache2/sites-enabled/000-default.conf <br/>
 </pre>
 ΚΑΙ την τιμή του DocumentRoot σε <br/>
 /home/<strong>[TO USER NAME POY EXO STA UBUNTU]</strong>/Documents/ika <br/>
-Τέλος κάνω <strong>chmod -R 755 ~</strong>
+Τέλος κάνω <strong>chmod -R 755 ~</strong> και <strong>sudo service apache2 restart</strong>
 
 
 <h2>Αν ανοίξω το <a href="http://localhost">http://localhost</a> θα πρέπει να δώ την αρχική</h2>

@@ -20,7 +20,31 @@ html {
 }
 
 @media (max-width: 767px) {
-  #phone_and_email {
-	display: none;
+  	#phone_and_email, #access {
+		display: none;
 	}
+	#menuSearch{
+		width: 100% !important;
+	}
+}
+
+#newsContent {
+	padding:15px;
+}
+
+#tagCloud {
+	width: 100%;
+	min-height: 300px;
+}
+#tagCloud .tier1 {
+	font-size: 50px;
+	color: #f48e40;
+}
+#tagCloud .tier2 {
+	font-size: 40px;
+	color: #0fa3b1;
+}
+#tagCloud .tier3 {
+	font-size: 25px;
+	color: #838486;
 }

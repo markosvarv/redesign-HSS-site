@@ -2,7 +2,7 @@
   <span id="access">Μέγεθος Γραμμάτων <input  type="range" min="1" max="2" value="1" step="0.5" onchange="$('#body').attr('style', 'font-size: ' + (this.value*100).toString() + '% !important');" ></span>
   <span id="access">Φωνητική Λειτουργία <span style="cursor: pointer;" class="glyphicon glyphicon-headphones"></span></span>
   <br>
-  <span class="pull-right" style="border: solid 1px;padding: 5px;"> 
+  <span class="pull-right" style="border: solid 1px;padding: 5px;border-radius: 2px;"> 
     <a href="">Σύνδεση</a> / <a href="">Εγγραφή</a>  <span id="phone_and_email">| <span class="glyphicon glyphicon-earphone"></span> 6982140569 <span class="glyphicon glyphicon-envelope"></span> info@ika.gr </span>| <a href="">English</a>
   </span>
 </div>
@@ -139,7 +139,7 @@
 
         <li><a href="/contact_points.html" class="dropdown-toggle">Σημεία Εξυπηρέτησης</a></li>
 
-        <li>
+        <li style="width: 210px;" id="menuSearch">
           <form class="navbar-form" role="search">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Αναζήτηση" name="q">

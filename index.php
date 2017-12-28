@@ -26,6 +26,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-16-04 -->
+    <!-- https://coolors.co/f48e40-0fa3b1-d9e5d6-eddea4-838486 -->
+    <!-- https://material.io/icons/#ic_search -->
   </head>
 
   <body>
@@ -38,32 +40,104 @@
       <div id="body">
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <h1>Marketing stuff!</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
-        <p><a class="btn btn-lg btn-info" href="#" role="button">Get started today</a></p>
+        <h1>Καλωσήρθες στον ιστοχώρου του <span style="color:#f48e40;">ΙΚΑ</span></h1>
+        <p class="lead">Δοκίμασε να πλοηγηθείς μέσω του menu ή να πληκρολογίσεις το ερώτημα σου απο κάτω.</p>
+        <form class="form-horizontal" role="search" _lpchecked="1">
+            <div class="input-group">
+              <input class="form-control input-lg" placeholder="Αναζήτηση" name="q" type="text">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+              </div>
+            </div>
+        </form>
+        <!-- <p><a class="btn btn-lg btn-info" href="#" role="button">Get started today</a></p> -->
       </div>
 
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-lg-4">
-          <h2>Safari bug warning!</h2>
-          <p class="text-danger">As of v9.1.2, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        <div class="col-lg-6">
+          <h2>Δημοφιλή στο IKA.gr</h2>
+          <div id="tagCloud">
+            <a href="/" class="tier1">ΑΜΚΑ</a>
+            <a href="/" class="tier2">Υπολογισμός Σύνταξης</a>
+            <a href="/" class="tier3">Εκδοση Σύνταξης</a>
+            <a href="/" class="tier2">Νέος Ασφαλισμένος</a>
+            <a href="/" class="tier1">Ηλεκτρονικές Υπηρεσίες</a>
+            <a href="/" class="tier3">Ασφαλιστική Ικανότητα</a>
+
+          </div>
         </div>
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+
+        <div class="col-lg-6">
+          <ul class="nav nav-tabs" id="newsTabs" role="tablist">
+            <li class="active"><a href="#last_news" role="tab" data-toggle="tab" aria-controls="last_news" aria-expanded="true">Τελευταία Νέα</a></li>
+            <li><a href="#staff_news" role="tab" data-toggle="tab" aria-controls="staff_news" aria-expanded="false">Ενημέρωση Προσωπικού</a></li>
+          </ul>
+          <div class="tab-content" id="newsContent"> 
+            <div class="tab-pane active" role="tabpanel" id="last_news">
+                <div class="media">
+                  <div class="media-left">
+                    <img width="80px" class="media-object" src="https://s.nbst.gr/files/1/2012/03/15/ika_1.thumbnail.jpg" alt="">
+                  </div>
+                  <div class="media-body">
+                    <a href="/"><h4 class="media-heading">Απεργία στο ΙΚΑ Θεσσαλονίκης και Κ. Μακεδονίας</h4></a>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum neque nisi, eget blandit augue hendrerit nec. Sed consequat neque eu pulvinar ornare. Mauris non nisl vel leo volutpat pharetra
+                  </div>
+                </div>
+
+                <div class="media">
+                  <div class="media-left">
+                    <img width="80px" class="media-object" src="http://www.corfupress.com/cp/wp-content/uploads/2011/02/www.kolivas.de_wp-content_uploads_2010_12_ika_kerkyras_2.jpg" alt="">
+                  </div>
+                  <div class="media-body">
+                    <a href="/"><h4 class="media-heading">ΙΚΑ Κέρκυρας: Ταλαιπωρία, μετά την απεργία…</h4></a>
+                    Vestibulum consectetur rutrum tincidunt. Suspendisse a finibus tellus, eget sodales lorem. Duis pharetra elit eu fringilla accumsan. Nullam feugiat consequat dolor non tempus. Nulla facilisi
+                  </div>
+                </div>
+                
+                <div class="btn-group btn-group-justified" role="group" aria-label="" style="margin-top:15px;">
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">Φόρτωση Παλαιώτερων</button>
+                  </div>
+                </div>
+            </div> 
+            <div class="tab-pane" role="tabpanel" id="staff_news">
+              <div class="media">
+                  <div class="media-left">
+                    <img width="80px" class="media-object" src="http://www.aftodioikisi.gr/wp-content/uploads/2017/10/ika.jpg" alt="">
+                  </div>
+                  <div class="media-body">
+                    <a href="/"><h4 class="media-heading">ΙΚΑ: Διευκρινίσεις για τις προϋποθέσεις χορήγησης παροχών σε χρήμα στο προσωπικό των ΟΤΑ</h4></a>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </div>
+                </div>
+
+                <div class="media">
+                  <div class="media-left">
+                    <img width="80px" class="media-object" src="https://www.drt915.gr/wp-content/uploads/2015/05/064c220229fd238a1b5e1c2099e969b9.jpg" alt="">
+                  </div>
+                  <div class="media-body">
+                    <a href="/"><h4 class="media-heading">Άμεση ενίσχυση του ΙΚΑ Τρίπολης με προσωπικό ζητά από την κυβέρνηση ο Κ. Βλάσης</h4></a>
+                    Vestibulum consectetur rutrum tincidunt. Suspendisse a finibus tellus, eget sodales lorem. Duis pharetra elit eu fringilla accumsan. Nullam feugiat consequat dolor non tempus. Nulla facilisi
+                  </div>
+                </div>
+                
+                <div class="btn-group btn-group-justified" role="group" aria-label="" style="margin-top:15px;">
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">Φόρτωση Παλαιώτερων</button>
+                  </div>
+                </div>
+            </div> 
+          </div>
         </div>
-      </div>
 
       </div>
       <?php include('./_footer.php'); ?>
+      <script type="text/javascript">
+        $('#newsTabs a').click(function (e) {
+          e.preventDefault();
+          $(this).tab('show');
+        })
+      </script>
   </body>
 </html>
