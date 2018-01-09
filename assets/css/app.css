@@ -1,0 +1,166 @@
+html {
+	font-size: 14px;
+}
+
+.right-tools{
+	/*width: 500px;*/
+	height: 50px;
+	padding-bottom: 5px;
+}
+#access{
+	display: inline-block;
+	margin-left:20px;
+	float: right;
+}
+#access input{
+	display: inline;
+	width: 50px;
+	line-height: 20px;
+	vertical-align: bottom;
+}
+
+@media (max-width: 767px) {
+  	#phone_and_email, #access {
+		display: none;
+	}
+	#menuSearch{
+		width: 100% !important;
+	}
+}
+
+#newsContent {
+	padding:15px;
+}
+
+#tagCloud {
+	width: 100%;
+	min-height: 300px;
+}
+#tagCloud .tier1 {
+	font-size: 50px;
+	color: #f48e40;
+}
+#tagCloud .tier2 {
+	font-size: 40px;
+	color: #0fa3b1;
+}
+#tagCloud .tier3 {
+	font-size: 25px;
+	color: #838486;
+}
+
+/*registration.php*/
+ul.breadcrumb {
+      padding: 5px 10px;
+      list-style: none;
+      background-color: white;
+  }
+  ul.breadcrumb li {
+      display: inline;
+      font-size: 18px;
+  }
+  ul.breadcrumb li+li:before {
+      padding: 5px;
+      color: black;
+      content: "/\00a0";
+  }
+  ul.breadcrumb li a {
+      color: #0275d8;
+      text-decoration: none;
+  }
+  ul.breadcrumb li a:hover {
+      color: #01447e;
+      text-decoration: underline;
+  }
+  * {
+      box-sizing: border-box;
+  }
+
+  input[type=text], select, textarea{
+      width: 75%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+  }
+  input[type=password], select, textarea{
+      width: 75%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+  }
+  input[type=email], select, textarea{
+      width: 75%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+  }
+  input[type=tel], select, textarea{
+      width: 40%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      resize: vertical;
+  }
+  label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+  }
+
+  input[type=submit] {
+      background-color: #db660d;
+      color: white;
+      padding: 18px 30px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+  }
+
+  input[type=submit]:hover {
+      background-color: #45a049;
+  }
+
+  .registration_cont {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+  }
+
+  /*.col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+  }
+
+  .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+  }*/
+
+  /* Clear floats after the columns */
+  .row:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+
+  .link {
+      float: right;
+      width: 200px;
+  }
+
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+      .col-25, .col-75, input[type=submit] {
+          width: 100%;
+          margin-top: 0;
+      }
+  }
