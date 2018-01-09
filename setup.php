@@ -48,6 +48,7 @@ sudo nano /etc/apache2/sites-enabled/000-default.conf <br/>
 <h4>Δημιουργία Βάσης</h4>
 ειμαι μέσα στο directory του project και τρέχω<br>
 <pre>
+	sudo apt-get install php5-mysql
 	mysql -u root -p
 	CREATE DATABASE ika;
 	exit
