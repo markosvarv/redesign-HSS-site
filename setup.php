@@ -57,3 +57,5 @@ sudo nano /etc/apache2/sites-enabled/000-default.conf <br/>
 	GRANT ALL PRIVILEGES ON * . * TO 'ika_user'@'localhost';
 	FLUSH PRIVILEGES;
 </pre>
+
+<?php echo phpinfo(); ?>
