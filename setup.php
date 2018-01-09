@@ -43,3 +43,19 @@ sudo nano /etc/apache2/sites-enabled/000-default.conf <br/>
 	git commit -m "EDO GRAFO TI EKANA"
 	git push origin master
 </pre>
+
+
+<h4>Δημιουργία Βάσης</h4>
+ειμαι μέσα στο directory του project και τρέχω<br>
+<pre>
+	sudo apt-get install php5-mysql
+	mysql -u root -p
+	CREATE DATABASE ika;
+	exit
+	mysql -u root -p ika < ikaDB.sql
+	CREATE USER 'ika_user'@'localhost' IDENTIFIED BY '51fdgdf@Gfd';
+	GRANT ALL PRIVILEGES ON * . * TO 'ika_user'@'localhost';
+	FLUSH PRIVILEGES;
+</pre>
+
+<?php echo phpinfo(); ?>
