@@ -54,4 +54,5 @@ sudo nano /etc/apache2/sites-enabled/000-default.conf <br/>
 	mysql -u root -p ika < ikaDB.sql
 	CREATE USER 'ika_user'@'localhost' IDENTIFIED BY '51fdgdf@Gfd';
 	GRANT ALL PRIVILEGES ON * . * TO 'ika_user'@'localhost';
+	FLUSH PRIVILEGES;
 </pre>
