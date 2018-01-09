@@ -42,6 +42,7 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
     <![endif]-->
 
 </head>
@@ -70,26 +71,28 @@
                 <div id = "search" class="col-lg-4">
 
                     <h4>Αναζήτηση σε περιοχή</h4>
+
+
                     <form class="navbar-form" role="search">
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Νομός
-                                <span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Νομός1</a></li>
-                                <li><a href="#">Νομός2</a></li>
-                                <li><a href="#">Νομός3</a></li>
-                            </ul>
+
+                        <div class="form-group">
+                            <select style="width: 100%;" class="form-control" id="sel1">
+                                <option disabled selected value style="display:none"> -- Επιλέξτε Νομό -- </option>
+                                <option>Αττικής</option>
+                                <option>Θεσσαλονίκης</option>
+                                <option>Αχαΐας</option>
+                                <option>Ηρακλείου</option>
+                            </select>
+                            <select style="width: 100%;" class="form-control" id="sel1">
+                                <option disabled selected value style="display:none"> -- Επιλέξτε Πόλη -- </option>
+                                <option>Αθήνα</option>
+                                <option>Θεσσαλονίκη</option>
+                                <option>Πάτρα</option>
+                                <option>Ηράκλειο</option>
+                            </select>
                         </div>
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Πόλη
-                                <span class="caret"></span></button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Πόλη1</a></li>
-                                <li><a href="#">Πόλη2</a></li>
-                                <li><a href="#">Πόλη3</a></li>
-                            </ul>
-                        </div>
-                        <div class="input-group">
+                        <br><br>
+                        <div class="input-group" style="width: 100%;">
                             <input type="text" class="form-control" placeholder="Διεύθυνση" name="srch-term" id="srch-term">
                             <div class="input-group-btn">
                                 <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
@@ -132,12 +135,17 @@
         </div>
     </div>
     <?php include('./_footer.php'); ?>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT6Dbk2on2-8l1esYV9IFEEG0uRhrK-Co&callback=initMap"></script>
 <script>
 
     $(document).on('click', '.yamm .dropdown-menu', function(e) {
         e.stopPropagation()
     });
+
+/*    $('.selectpicker').selectpicker({
+        style: 'btn-info',
+        size: 4
+    });*/
 
     function init_map() {
         //var results = 5;
