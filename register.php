@@ -49,13 +49,13 @@
          <!--  </div>
         </div> -->
         <h1>Εγγραφή</h1>
-        <form action="/authenticate.php?a=registration" method="post">
+        <form action="/authenticate.php?a=register" method="post">
           <div class="row">
             <div class="col-md-4">
-              <label for="mail">Διεύθυνση Ηλεκτρονικού Ταχυδρομίου</label>
+              <label for="mail">Διεύθυνση Ηλεκτρονικού Ταχυδρομείου*</label>
             </div>
             <div class="col-md-8">
-              <input type="email" id="mail" name="Διεύθυνση Ηλεκτρονικού Ταχυδρομίου" placeholder="Εισάγετε email..">
+              <input type="email" id="mail" name="email" placeholder="Εισάγετε email.." required>
             </div>
           </div>
           <div class="row">
@@ -63,7 +63,7 @@
               <label for="pass">Κωδικός Χρήστη</label>
             </div>
             <div class="col-md-8">
-              <input type="password" id="pass" name="Κωδικός Χρήστη" placeholder="Επιλέξτε Κωδικό..">
+              <input type="password" id="pass" name="password" placeholder="Επιλέξτε Κωδικό..">
             </div>
           </div>
           <div class="row">
@@ -71,7 +71,7 @@
               <label for="pass">Επανάληψη Κωδικού</label>
             </div>
             <div class="col-md-8">
-              <input type="password" id="pass" name="Επανάληψη Κωδικού" placeholder="Επαναλάβατε τον Κωδικό σας..">
+              <input type="password" id="pass" name="passwordConfirmation" placeholder="Επαναλάβατε τον Κωδικό σας..">
             </div>
           </div>
           <h2>Προσωπικά Στοιχεία</h2>
@@ -80,7 +80,7 @@
               <label for="name">Όνομα</label>
             </div>
             <div class="col-md-8">
-              <input type="text" id="name" name="Όνομα" placeholder="Εισάγετε το Ονόμα σας..">
+              <input type="text" id="name" name="firstName" placeholder="Εισάγετε το Ονόμα σας..">
             </div>
           </div>
           <div class="row">
@@ -88,7 +88,7 @@
               <label for="surname">Επίθετο</label>
             </div>
             <div class="col-md-8">
-              <input type="text" id="surname" name="Επίθετο" placeholder="Εισάγετε το Επίθετο σας..">
+              <input type="text" id="surname" name="lastName" placeholder="Εισάγετε το Επίθετο σας..">
             </div>
           </div>
           <div class="row">
@@ -96,7 +96,7 @@
               <label for="amka">ΑΜΚΑ</label>
             </div>
             <div class="col-md-8">
-              <input type="text" id="amka" name="ΑΜΚΑ" placeholder="Εισάγετε το ΑΜΚΑ σας..">
+              <input type="text" id="amka" name="amka" placeholder="Εισάγετε το ΑΜΚΑ σας..">
             </div>
           </div>
           <div class="row">
@@ -104,7 +104,7 @@
               <label for="bdate">Ημερομηνία Γέννησης</label>
             </div>
             <div class="col-md-8">
-              <input type="date" id="bdate" name="Ημερομηνία Γέννησης" placeholder="Εισάγετε την Ημερομηνία Γέννησης σας..">
+              <input type="date" id="bdate" name="birthday" placeholder="Εισάγετε την Ημερομηνία Γέννησης σας..">
             </div>
           </div>
           <div class="row">
@@ -112,7 +112,7 @@
               <label for="address">Διεύθυνση</label>
             </div>
             <div class="col-md-8">
-              <input type="text" id="address" name="Διεύθυνση" placeholder="Εισάγετε τη Διεύθυνσή σας..">
+              <input type="text" id="address" name="address" placeholder="Εισάγετε τη Διεύθυνσή σας..">
             </div>
           </div>
           <div class="row">
@@ -120,12 +120,12 @@
               <label for="telnumber">Τηλέφωνο</label>
             </div>
             <div class="col-md-8">
-              <input type="tel" id="telnumber" name="Τηλέφωνο" placeholder="Εισάγετε τον Αριθμό Τηλεφώνου σας..">
+              <input type="tel" id="telnumber" name="phone" placeholder="Εισάγετε τον Αριθμό Τηλεφώνου σας..">
             </div>
           </div>
           <div class="row" style="margin-top: 10px">
             <div class="col-md-4">
-              Αποδέχομαι τους όρους χρήσης  <input type="checkbox" name="vehicle" value="Bike">
+              Αποδέχομαι τους όρους χρήσης  <input type="checkbox" name="terms" value="Bike">
             </div>
             <div class="col-md-4">
             </div>

@@ -41,7 +41,7 @@
       <div id="body">
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <h1>Καλωσήρθες στον ιστοχώρου του <span style="color:#f48e40;">ΙΚΑ</span></h1>
+        <h1>Καλωσήρθες στον ιστοχώρο του <span style="color:#f48e40;">ΙΚΑ</span></h1>
         <p class="lead">Δοκίμασε να πλοηγηθείς μέσω του menu ή να πληκρολογίσεις το ερώτημα σου απο κάτω.</p>
 
         <form class="form-horizontal" role="search" action="search.php">

@@ -113,19 +113,7 @@ ul.breadcrumb {
       display: inline-block;
   }
 
-  input[type=submit] {
-      background-color: #db660d;
-      color: white;
-      padding: 18px 30px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      float: right;
-  }
-
-  input[type=submit]:hover {
-      background-color: #45a049;
-  }
+  
 
   .registration_cont {
       border-radius: 5px;
