@@ -23,7 +23,7 @@
       <a href="/login.php">Σύνδεση</a> / <a href="/register.php">Εγγραφή</a>  
     <?php endif; ?>
 
-    <span id="phone_and_email">| <strong><span class="glyphicon glyphicon-earphone"></span>21045454545 <span class="glyphicon glyphicon-envelope"></span> info@ika.gr </span></strong>| <a href="">English</a>
+    <span id="phone_and_email">| <strong><span class="glyphicon glyphicon-earphone"></span>21045454545 <span class="glyphicon glyphicon-envelope"></span> info@ika.gr </span></strong>| <a href="/">English</a>
   </span>
 </div>
 

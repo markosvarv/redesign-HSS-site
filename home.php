@@ -1,6 +1,6 @@
 <?php 
   include ('_session.php');
-  only_loggedin();
+  only_loggedin($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,9 +44,36 @@
       <?php include('./flush.php'); ?>
       <div id="body">
           
-          <h2>Γειά σου <?= $user['firstName']?> <?= $user['lastName'] ?></h2>
-          <span>Edo vazeis oti thes</span>
-          <!-- edo vazeis oti thes -->
+          <div class="panel panel-default">
+              <div class="panel-heading">Τα στοιχεία μου</div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-3">
+                      <p>Όνομα Επώνημο</p>
+                      <p>email</p>
+                      <p>ΑΜΚΑ</p>
+                      <p>Ημερομηνία Γέννησης</p>
+                  </div>
+                  <div class="col-md-3">
+                      <p><strong><?= $user['firstName']?> <?= $user['lastName'] ?></strong></p>
+                      <p><strong><?= $user['email']?></strong></p>
+                      <p><strong><?= $user['amka']?></strong></p>
+                      <p><strong><?= $user['birthday']?></strong></p>
+                  </div> 
+                  <div class="col-md-3">
+                      <p>Διεύθυνση</p>
+                      <p>Τηλέφωνο</p>
+                      <p>Ασφαλισμένος</p>
+                  </div>
+                  <div class="col-md-3">
+                      <p><strong><?= $user['address'] ?></strong></p>
+                      <p><strong><?= $user['phone']?></strong></p>
+                      <p><strong><?= $user['user_type']?></strong></p>
+                  </div> 
+                </div>
+                <a style="float: right;" href="/θπδατε.php" class="btn btn-default">Επεξεργασία λογαριασού</a>
+              </div>
+          </div>
 
       </div>
       <?php include('./_footer.php'); ?>

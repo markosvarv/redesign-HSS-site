@@ -1,7 +1,7 @@
 <?php 
 	include ('db_connection.php');
-
-	function only_loggedin()
+	$user = null ;
+	function only_loggedin($conn)
 	{
 		if(!isset($_SESSION["user_id"])){
 		$_SESSION['flush']['error'] = "Παρακαλώ <a style=\"color:#a94442;font-weight:bold;\" href=\"/login.php\">συνδεθείτε</a> πρώτα!";

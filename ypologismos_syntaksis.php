@@ -1,6 +1,5 @@
 <?php 
   include ('_session.php');
-  //only_loggedin();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -189,7 +188,7 @@
 
 		function PrintElem(elem)
 		{
-		    var mywindow = window.open('', 'PRINT', 'height=400,width=600');
+		    var mywindow = window.open('', 'PRINT', 'height=1000,width=800');
 
 		    mywindow.document.write('<html><head><title>' + document.title  + '</title>');
 		    mywindow.document.write('</head><body >');

@@ -24,8 +24,8 @@
 		}
 	}
 
-	function register($conn, $firstName, $lastName, $email, $password, $passwordConfirmation, $birthday){
-		if($firstName==''||$lastName==''||$email==''||$password==''||$birthday==''||$passwordConfirmation==''){
+	function register($conn, $firstName, $lastName, $email, $password, $passwordConfirmation, $birthday, $amka, $address, $phone){
+		if($firstName==''||$lastName==''||$email==''||$password==''||$birthday==''||$passwordConfirmation==''||$amka==''){
 			$_SESSION['flush']['error'] = 'Παρακαλώ συμπληρώστε όλα τα πεδία!';
 			return false;
 		}
@@ -33,8 +33,21 @@
 			$_SESSION['flush']['error'] = 'Οι κωδικοί δεν ταιριάζουν!';
 			return false;
 		}
-		$res = $conn->prepare("INSERT INTO users (firstName, lastName, email, password) VALUES (:fName, :lName, :email, :password)");
-		$res->execute(array(':email' => $email, ':password' => hash('sha256', $password), ':fName' => $firstName, ':lName' => $lastName));
+		$res = $conn->prepare("SELECT id FROM users WHERE email = :email LIMIT 1");
+		$res->execute(array(':email' => $email ));
+		if ($res->rowCount() == 1){
+			$_SESSION['flush']['error'] = 'Αυτό το email υπάρχει ήδη!';
+			return false;
+		}
+		$res = $conn->prepare("SELECT id FROM users WHERE amka = :amka LIMIT 1");
+		$res->execute(array(':amka' => $amka ));
+		if ($res->rowCount() == 1){
+			$_SESSION['flush']['error'] = 'Αυτό το ΑΜΚΑ υπάρχει ήδη!';
+			return false;
+		}
+
+		$res = $conn->prepare("INSERT INTO users (firstName, lastName, email, password, birthday, amka, address, phone) VALUES (:fName, :lName, :email, :password, :birthday, :amka, :address, :phone)");
+		$res->execute(array(':email' => $email, ':password' => hash('sha256', $password), ':fName' => $firstName, ':lName' => $lastName, ':amka' => $amka, ':address' => $address, ':phone' => $phone, ':birthday' => $birthday));
 		if ($res->rowCount() == 1){
 			return true;
 		}else{
@@ -42,8 +55,8 @@
 		}
 	}
 
-	function update($conn, $firstName, $lastName, $email, $password, $passwordConfirmation, $birthday){
-		if($firstName==''||$lastName==''||$email==''||$birthday==''){
+	function update($conn, $firstName, $lastName, $email, $password, $passwordConfirmation, $birthday, $amka, $address, $phone){
+		if($firstName==''||$lastName==''||$email==''||$birthday==''||$amka==''){
 			$_SESSION['flush']['error'] = 'Παρακαλώ συμπληρώστε όλα τα πεδία!';
 			return false;
 		}
@@ -51,12 +64,25 @@
 			$_SESSION['flush']['error'] = 'Οι κωδικοί δεν ταιριάζουν!';
 			return false;
 		}
+		$res = $conn->prepare("SELECT id FROM users WHERE email = :email LIMIT 1");
+		$res->execute(array(':email' => $email ));
+		if ($res->rowCount() == 1){
+			$_SESSION['flush']['error'] = 'Αυτό το email υπάρχει ήδη!';
+			return false;
+		}
+		$res = $conn->prepare("SELECT id FROM users WHERE amka = :amka LIMIT 1");
+		$res->execute(array(':amka' => $amka ));
+		if ($res->rowCount() == 1){
+			$_SESSION['flush']['error'] = 'Αυτό το ΑΜΚΑ υπάρχει ήδη!';
+			return false;
+		}
+
 		if($password!=''){
-			$res = $conn->prepare("UPDATE users (firstName, lastName, email, password) VALUES (:fName, :lName, :email, :password) WHERE id = :id");
-			$res->execute(array(':id' => $_SESSION["user_id"],':email' => $email, ':password' => hash('sha256', $password), ':fName' => $firstName, ':lName' => $lastName));
+			$res = $conn->prepare("UPDATE users (firstName, lastName, email, password, amka, address, phone) VALUES (:fName, :lName, :email, :password, :birthday, :amka, :address, :phone) WHERE id = :id");
+			$res->execute(array(':id' => $_SESSION["user_id"],':email' => $email, ':password' => hash('sha256', $password), ':fName' => $firstName, ':lName' => $lastName, ':amka' => $amka, ':address' => $address, ':phone' => $phone, ':birthday' => $birthday));
 		}else{
-			$res = $conn->prepare("UPDATE users (firstName, lastName, email) VALUES (:fName, :lName, :email) WHERE id = :id");
-			$res->execute(array(':id' => $_SESSION["user_id"],':email' => $email, ':fName' => $firstName, ':lName' => $lastName));
+			$res = $conn->prepare("UPDATE users (firstName, lastName, email, amka, address, phone) VALUES (:fName, :lName, :email, :birthday, :amka, :address, :phone) WHERE id = :id");
+			$res->execute(array(':id' => $_SESSION["user_id"],':email' => $email, ':fName' => $firstName, ':lName' => $lastName, ':amka' => $amka, ':address' => $address, ':phone' => $phone, ':birthday' => $birthday));
 		}
 		if ($res->rowCount() == 1){
 			return true;
@@ -75,7 +101,7 @@
 	// if($action == "login" && $_SERVER['REQUEST_METHOD'] == 'POST'){
 	// 	if (login($conn, $_POST['email'], $_POST['password'])){
 	if($action == "login" && $_SERVER['REQUEST_METHOD'] == 'GET'){
-		if (login($conn, "spyrosavl@gmail.com", "123456")){
+		if (login($conn, "spyrosavl1@gmail.com", "123456")){
 			header("Location: /home.php");
 			die();
 		}else{
@@ -84,7 +110,10 @@
 			die();
 		}
 	}elseif ($action == "register" && $_SERVER['REQUEST_METHOD'] == 'POST') {
-		if (register($conn, $_POST['firstName'], $_POST['lastName'], $_POST['email'], $_POST['password'], $_POST['passwordConfirmation'], $_POST['birthday'])){
+		foreach($_POST as $p_key => $p_value){
+			$_SESSION["register_".$p_key] = $p_value;
+		}
+		if (register($conn, $_POST['firstName'], $_POST['lastName'], $_POST['email'], $_POST['password'], $_POST['passwordConfirmation'], $_POST['birthday'], $_POST['amka'], $_POST['address'], $_POST['phone'])){
 			$_SESSION['flush']['success'] = "Επιτυχής εγγραφή!Τώρα μπορείτε να συνδεθείτε!";
 			header("Location: /login.php");
 			die();
@@ -94,7 +123,7 @@
 		}
 	}elseif ($action == "update" && $_SERVER['REQUEST_METHOD'] == 'POST') {
 		if (isset($_SESSION["user_id"])){
-			if (update($conn, $_POST['firstName'], $_POST['lastName'], $_POST['email'], $_POST['password'], $_POST['passwordConfirmation'], $_POST['birthday'])){
+			if (update($conn, $_POST['firstName'], $_POST['lastName'], $_POST['email'], $_POST['password'], $_POST['passwordConfirmation'], $_POST['birthday'], $_POST['amka'], $_POST['address'], $_POST['phone'])){
 				$_SESSION['flush']['success'] = "Επιτυχής αποθήκευση!";
 			}
 			header("Location: /update_profile.php");

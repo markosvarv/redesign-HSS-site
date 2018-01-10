@@ -55,7 +55,7 @@
               <label for="mail">Διεύθυνση Ηλεκτρονικού Ταχυδρομείου*</label>
             </div>
             <div class="col-md-8">
-              <input type="email" id="mail" name="email" placeholder="Εισάγετε email.." required>
+              <input type="email" id="mail" name="email" placeholder="Εισάγετε email.." required value="<?= $_SESSION['register_email']?>">
             </div>
           </div>
           <div class="row">
@@ -80,7 +80,7 @@
               <label for="name">Όνομα</label>
             </div>
             <div class="col-md-8">
-              <input type="text" id="name" name="firstName" placeholder="Εισάγετε το Ονόμα σας..">
+              <input type="text" id="name" name="firstName" placeholder="Εισάγετε το Ονόμα σας.." value="<?= $_SESSION['register_firstName']?>">
             </div>
           </div>
           <div class="row">
@@ -88,7 +88,7 @@
               <label for="surname">Επίθετο</label>
             </div>
             <div class="col-md-8">
-              <input type="text" id="surname" name="lastName" placeholder="Εισάγετε το Επίθετο σας..">
+              <input type="text" id="surname" name="lastName" placeholder="Εισάγετε το Επίθετο σας.." value="<?= $_SESSION['register_lastName']?>">
             </div>
           </div>
           <div class="row">
@@ -96,7 +96,7 @@
               <label for="amka">ΑΜΚΑ</label>
             </div>
             <div class="col-md-8">
-              <input type="text" id="amka" name="amka" placeholder="Εισάγετε το ΑΜΚΑ σας..">
+              <input type="text" id="amka" name="amka" placeholder="Εισάγετε το ΑΜΚΑ σας.." value="<?= $_SESSION['register_amka']?>" >
             </div>
           </div>
           <div class="row">
@@ -104,7 +104,7 @@
               <label for="bdate">Ημερομηνία Γέννησης</label>
             </div>
             <div class="col-md-8">
-              <input type="date" id="bdate" name="birthday" placeholder="Εισάγετε την Ημερομηνία Γέννησης σας..">
+              <input type="date" id="bdate" name="birthday" placeholder="Εισάγετε την Ημερομηνία Γέννησης σας.." value="<?= $_SESSION['register_birthday']?>">
             </div>
           </div>
           <div class="row">
@@ -112,7 +112,7 @@
               <label for="address">Διεύθυνση</label>
             </div>
             <div class="col-md-8">
-              <input type="text" id="address" name="address" placeholder="Εισάγετε τη Διεύθυνσή σας..">
+              <input type="text" id="address" name="address" placeholder="Εισάγετε τη Διεύθυνσή σας.." value="<?= $_SESSION['register_address']?>">
             </div>
           </div>
           <div class="row">
@@ -120,7 +120,7 @@
               <label for="telnumber">Τηλέφωνο</label>
             </div>
             <div class="col-md-8">
-              <input type="tel" id="telnumber" name="phone" placeholder="Εισάγετε τον Αριθμό Τηλεφώνου σας..">
+              <input type="tel" id="telnumber" name="phone" placeholder="Εισάγετε τον Αριθμό Τηλεφώνου σας.." value="<?= $_SESSION['register_phone']?>">
             </div>
           </div>
           <div class="row" style="margin-top: 10px">

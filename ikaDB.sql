@@ -16,6 +16,38 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `insurance_month`
+--
+
+DROP TABLE IF EXISTS `insurance_month`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `insurance_month` (
+  `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `employer` int(6) unsigned NOT NULL,
+  `employee` int(6) unsigned NOT NULL,
+  `reg_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `salary` int(11) NOT NULL,
+  `month` int(11) DEFAULT NULL,
+  `year` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `employer` (`employer`),
+  KEY `employee` (`employee`),
+  CONSTRAINT `insurance_month_ibfk_1` FOREIGN KEY (`employer`) REFERENCES `users` (`id`),
+  CONSTRAINT `insurance_month_ibfk_2` FOREIGN KEY (`employee`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `insurance_month`
+--
+
+LOCK TABLES `insurance_month` WRITE;
+/*!40000 ALTER TABLE `insurance_month` DISABLE KEYS */;
+/*!40000 ALTER TABLE `insurance_month` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -31,8 +63,13 @@ CREATE TABLE `users` (
   `password` varchar(256) NOT NULL,
   `loginAttempts` int(11) DEFAULT NULL,
   `user_type` varchar(30) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+  `amka` varchar(30) DEFAULT NULL,
+  `phone` varchar(30) DEFAULT NULL,
+  `address` varchar(30) DEFAULT NULL,
+  `birthday` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `amka` (`amka`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +78,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (17,'Spyros','Spyros','spyrosavl@gmail.com','2018-01-08 17:26:11','8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92',NULL,NULL);
+INSERT INTO `users` VALUES (17,'Spyros','Spyros','spyrosavl@gmail.com','2018-01-08 17:26:11','8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92',NULL,NULL,NULL,NULL,NULL,NULL),(18,'Spyros','Avlonitis','spyrosavl1@gmail.com','2018-01-10 16:58:16','8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92',NULL,NULL,'578277278','6982140568','zxdfdfsd61 ds616','2018-01-16');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +90,5 @@ UNLOCK TABLES;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
--- Dump completed on 2018-01-09 11:29:15
+
+-- Dump completed on 2018-01-10 19:05:53
