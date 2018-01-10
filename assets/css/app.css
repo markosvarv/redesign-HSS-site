@@ -50,105 +50,54 @@ html {
 }
 
 /*registration.php*/
-ul.breadcrumb {
-      padding: 5px 10px;
-      list-style: none;
-      background-color: white;
-  }
-  ul.breadcrumb li {
-      display: inline;
-      font-size: 18px;
-  }
-  ul.breadcrumb li+li:before {
-      padding: 5px;
-      color: black;
-      content: "/\00a0";
-  }
-  ul.breadcrumb li a {
-      color: #0275d8;
-      text-decoration: none;
-  }
-  ul.breadcrumb li a:hover {
-      color: #01447e;
-      text-decoration: underline;
-  }
-  * {
-      box-sizing: border-box;
-  }
 
-  input[type=text], select, textarea{
-      width: 75%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      resize: vertical;
-  }
-  input[type=password], select, textarea{
-      width: 75%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      resize: vertical;
-  }
-  input[type=email], select, textarea{
-      width: 75%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      resize: vertical;
-  }
-  input[type=tel], select, textarea{
-      width: 40%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      resize: vertical;
-  }
-  label {
-      padding: 12px 12px 12px 0;
-      display: inline-block;
-  }
 
-  
+.registration_cont input[type=text], select, textarea{
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+.registration_cont input[type=password], select, textarea{
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+.registration_cont input[type=email], select, textarea{
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+.registration_cont input[type=tel], select, textarea{
+    width: 40%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+.registration_cont label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
 
-  .registration_cont {
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 20px;
-  }
 
-  /*.col-25 {
-      float: left;
-      width: 25%;
-      margin-top: 6px;
-  }
 
-  .col-75 {
-      float: left;
-      width: 75%;
-      margin-top: 6px;
-  }*/
+.registration_cont {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
 
-  /* Clear floats after the columns */
-  .row:after {
-      content: "";
-      display: table;
-      clear: both;
-  }
-
-  .link {
-      float: right;
-      width: 200px;
-  }
-
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media (max-width: 600px) {
-      .col-25, .col-75, input[type=submit] {
-          width: 100%;
-          margin-top: 0;
-      }
-  }
+.registration_cont .link {
+    float: right;
+    width: 200px;
+}
