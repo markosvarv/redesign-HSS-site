@@ -1,5 +1,6 @@
 <?php 
   include ('_session.php');
+  only_loggedin();
 ?>
 <!DOCTYPE html>
 <html lang="en">

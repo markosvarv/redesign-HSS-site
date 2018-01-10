@@ -72,10 +72,10 @@
 		session_unset();
 	}
 
-	if($action == "login" && $_SERVER['REQUEST_METHOD'] == 'POST'){
-		if (login($conn, $_POST['email'], $_POST['password'])){
-	// if($action == "login" && $_SERVER['REQUEST_METHOD'] == 'GET'){
-	// 	if (login($conn, "spyrosavl@gmail.com", "123456")){
+	// if($action == "login" && $_SERVER['REQUEST_METHOD'] == 'POST'){
+	// 	if (login($conn, $_POST['email'], $_POST['password'])){
+	if($action == "login" && $_SERVER['REQUEST_METHOD'] == 'GET'){
+		if (login($conn, "spyrosavl@gmail.com", "123456")){
 			header("Location: /home.php");
 			die();
 		}else{

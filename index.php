@@ -61,7 +61,7 @@
           <h2>Δημοφιλή στο IKA.gr</h2>
           <div id="tagCloud">
             <a href="/" class="tier1">ΑΜΚΑ</a>
-            <a href="/" class="tier2">Υπολογισμός Σύνταξης</a>
+            <a href="/ypologismos_syntaksis.php" class="tier2">Υπολογισμός Σύνταξης</a>
             <a href="/" class="tier3">Εκδοση Σύνταξης</a>
             <a href="/" class="tier2">Νέος Ασφαλισμένος</a>
             <a href="/" class="tier1">Ηλεκτρονικές Υπηρεσίες</a>
