@@ -18,7 +18,7 @@
 
     
     <?php if (isset($user)): ?>
-      <span class="glyphicon glyphicon-user"></span> <a href="/update_profile.php"><?= $user['firstName'] ?> <?= $user['lastName'] ?></a> / <a href="/authenticate.php?a=logout">Αποσύνδεση</a> 
+      <span class="glyphicon glyphicon-user"></span> <a href="/home.php"><?= $user['firstName'] ?> <?= $user['lastName'] ?></a> / <a href="/authenticate.php?a=logout">Αποσύνδεση</a> 
     <?php else: ?>
       <a href="/login.php">Σύνδεση</a> / <a href="/register.php">Εγγραφή</a>  
     <?php endif; ?>
@@ -172,7 +172,7 @@
                     <h4>Δημοφιλέις Εργασίες</h4>
                     <ul style="list-style-type: none;">
                       <li>
-                        <h5 class="media-heading"><a href="/">Υπολογισμός Σύνταξης</a></h5>
+                        <h5 class="media-heading"><a href="/ypologismos_syntaksis.php">Υπολογισμός Σύνταξης</a></h5>
                       </li>
                       <li>
                         <h5 class="media-heading"><a href="/">Αναζήτηση Γιατρού ΕΟΠΥΥ</a></h5>

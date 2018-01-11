@@ -35,7 +35,7 @@ CREATE TABLE `insurance_month` (
   KEY `employee` (`employee`),
   CONSTRAINT `insurance_month_ibfk_1` FOREIGN KEY (`employer`) REFERENCES `users` (`id`),
   CONSTRAINT `insurance_month_ibfk_2` FOREIGN KEY (`employee`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,6 +44,7 @@ CREATE TABLE `insurance_month` (
 
 LOCK TABLES `insurance_month` WRITE;
 /*!40000 ALTER TABLE `insurance_month` DISABLE KEYS */;
+INSERT INTO `insurance_month` VALUES (1,18,18,'2018-01-11 14:41:35',1000,5,2017);
 /*!40000 ALTER TABLE `insurance_month` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -91,4 +92,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-10 19:05:53
+-- Dump completed on 2018-01-11 16:42:17

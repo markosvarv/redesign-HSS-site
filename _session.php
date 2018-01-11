@@ -2,7 +2,8 @@
 	include ('db_connection.php');
 	$user = null ;
 	function only_loggedin($conn)
-	{
+	{	
+		global $user;
 		if(!isset($_SESSION["user_id"])){
 		$_SESSION['flush']['error'] = "Παρακαλώ <a style=\"color:#a94442;font-weight:bold;\" href=\"/login.php\">συνδεθείτε</a> πρώτα!";
 		header("Location: /");

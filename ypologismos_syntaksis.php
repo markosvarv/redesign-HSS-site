@@ -62,7 +62,7 @@
 			<li>Υπολογισμός Σύνταξης</li>
 		</ul>
 
-		<h1>Υπολογισμός Βασικού Ποσού Σύνταξης</h1>
+		<h1>Αυτόματος Υπολογισμός Βασικού Ποσού Σύνταξης</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac ipsum lacus. Integer rutrum mauris velit, non accumsan dolor congue ac. Aenean gravida diam neque, at cursus nisl placerat a. Integer sit amet risus congue, fringilla odio vel, feugiat leo. Donec rhoncus mauris ac velit pulvinar, non efficitur ipsum consequat</p>
 		<?php if (!isset($user)) : ?>
 			<div class="jumbotron" style="padding: 20px;">
@@ -162,6 +162,94 @@
 				</div>
 				</form>
 			</div>
+		<?php else: ?>
+			<?php 
+				$total_days = 0;
+				$res = $conn->prepare("SELECT * FROM insurance_month INNER JOIN users ON insurance_month.employer=users.id WHERE employee = :id");
+				$res->execute(array(':id' => $user["id"]));
+				$incusrance_months = $res->fetchAll(PDO::FETCH_ASSOC);
+				foreach ($incusrance_months as $month) {
+					$res = $conn->prepare("SELECT * FROM users WHERE id = :id LIMIT 1");
+					$res->execute(array(':id' => $month['employer']));
+				}
+			?>
+			<div id="data_entry" style="padding: 10px;">
+				<hr>
+				<h3>Στοιχεία Ασφάλισης</h3>
+				<form id="ypologismos">
+				<div class="row">
+					<div class="col-md-3">
+						<h5>Σύνολο ημερών εργασίας <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Hooray!"></span></h5>
+					</div>
+					<div class="col-md-4">
+						<input class="form-control" type="number" id="days_total" required min="0" max="29200" disabled value="<?= $total_days ?>">
+					</div>
+				</div>
+			
+				<div class="row" style="margin-top:10px;">
+					<div class="col-md-3">
+						<h5>Αποδοχές και ημέρες εργασίας ανα έτος <span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Hooray!"></span></h5>
+					</div>
+					<div class="col-md-9">
+					
+					<table class="table table-striped" id="stoixeia_table">
+						<thead>
+							<tr><th>Μήνας</th><th>Έτος</th><th>Εργοδότης</th><th>Αποδοχές σε ευρώ</th><th></th></tr>
+						</thead>
+						<tbody>
+							<?php foreach ($incusrance_months as $month): ?>
+								<tr>
+								<td>
+									<input class="form-control" required disabled value="<?= $month['month'] ?>">
+								</td>
+								<td>
+									<input class="form-control" required disabled value="<?= $month['year'] ?>">
+								</td>
+								<td>
+									<input class="form-control" required disabled value="<?= $month['firstName'] ?> <?= $month['lastName'] ?>">
+								</td>
+								<td>
+									<input class="form-control" type="number" required disabled value="<?= $month['salary'] ?>">
+								</td>
+								<td>	
+								</td>
+
+							</tr>
+							<?php endforeach; ?>
+						</tbody>
+					</table>
+					</div>
+				</div>
+
+				<div class="row" style="margin-top:10px;">
+					<div class="col-md-3">
+						<h4>Σημειώσεις</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac ipsum lacus. Integer rutrum mauris velit, non accumsan dolor congue ac. Aenean gravida diam neque, at cursus nisl placerat a. Integer sit amet risus congue, fringilla odio vel, feugiat leo. Donec rhoncus mauris ac velit pulvinar, non efficitur ipsum consequat</p>
+					</div>
+					<div class="col-md-5">
+						<a href="#" id="add_year2">
+							<span class="glyphicon glyphicon-plus-sign"></span> Προσθήκη έτους
+						</a>
+					</div>
+					<div class="col-md-4">
+						<input type="submit" value="Υπολογισμός ξανά" class="btn btn-primary btn-lg btn-block" >
+					</div>
+					<div class="col-md-3"></div>
+					<div class="col-md-9">
+						<br/>
+						<div class="panel panel-default" style="" id="apotelesmata">
+						  <div class="panel-heading">Αποτελέσματα</div>
+						  <div class="panel-body">
+						  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac ipsum lacus. Integer rutrum mauris velit, non accumsan dolor congue ac. Aenean gravida diam neque, at cursus nisl placerat a.</p>
+						  	<h5>Τελικό πορό σύνταξης: 8569 ευρώ</h5>
+						  	<a style="float: right; margin-left: 15px;" href="#" onclick="print();" class="btn btn-primary">Εκτύπωση</a>
+						  	<a style="float: right;" href="/login.php" class="btn btn-default">Αποθήκευση Στοιχείων στον λογαριασμό μου</a>
+						  </div>
+						</div>
+					</div>
+				</div>
+				</form>
+			</div>
       	<?php endif; ?>
 
       </div>
@@ -179,6 +267,10 @@
 
 		$("#add_year").click(function() {
         	$("#stoixeia_table > tbody").append('<tr> <td> <select style="width: 100%;" class="form-control" required> <?php for ($i=2017; $i >= 1980; $i--) {echo "<option>".$i."</option>"; } ?> </select> </td> <td> <input class="form-control" type="number" required> </td> <td> <input class="form-control" type="number" max="365" min="0" required> </td> <td> <a class="remove_row" href="#"><span class="glyphicon glyphicon-remove-sign"></span></a> </td> </tr>'); 
+        });
+
+		$("#add_year2").click(function() {
+        	$("#stoixeia_table > tbody").append('<tr> <td> <select style="width: 100%;" class="form-control" required> <?php for ($i=1; $i <= 12; $i++) {echo "<option>".$i."</option>"; } ?> </select> </td><td> <select style="width: 100%;" class="form-control" required> <?php for ($i=2017; $i >= 1980; $i--) {echo "<option>".$i."</option>"; } ?> </select> </td> <td> <input disabled class="form-control" type="number" required> </td> <td> <input class="form-control" type="number" required> </td>  <td> <a class="remove_row" href="#"><span class="glyphicon glyphicon-remove-sign"></span></a> </td> </tr>'); 
         });
 
 		$("#stoixeia_table").on("click", ".remove_row", function() {

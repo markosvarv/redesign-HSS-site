@@ -58,4 +58,8 @@ sudo nano /etc/apache2/sites-enabled/000-default.conf <br/>
 	FLUSH PRIVILEGES;
 </pre>
 
+<pre>
+	sudo apt-get install sqlite php-sqlite3
+</pre>
+
 <?php echo phpinfo(); ?>
