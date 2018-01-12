@@ -277,27 +277,8 @@
 			$(this).parent().parent().remove();
 		});
 
-
-		function PrintElem(elem)
-		{
-		    var mywindow = window.open('', 'PRINT', 'height=1000,width=800');
-
-		    mywindow.document.write('<html><head><title>' + document.title  + '</title>');
-		    mywindow.document.write('</head><body >');
-		    mywindow.document.write('<h1>' + document.title  + '</h1>');
-		    mywindow.document.write(document.getElementById(elem).innerHTML);
-		    mywindow.document.write('</body></html>');
-
-		    mywindow.document.close(); // necessary for IE >= 10
-		    mywindow.focus(); // necessary for IE >= 10*/
-
-		    mywindow.print();
-		    mywindow.close();
-
-		    return true;
-		}
-
-		$("#ypologismos").submit(function() {
+		$("#ypologismos").submit(function(event) {
+			event.preventDefault();
         	$("#apotelesmata").show(); 
         });
       </script>
