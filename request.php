@@ -1,3 +1,7 @@
+<?php
+include ('_session.php');
+only_loggedin($conn);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <html>
@@ -58,7 +62,7 @@
         <div class = "page-header">
             <h3>Υποβολή ενσήμων</h3>
         </div>
-        
+
         <div class="panel panel-primary">
             <div class="panel-heading"> <h4>Στοιχεία Εργαζομένου</h4></div>
             <div class="panel-body">

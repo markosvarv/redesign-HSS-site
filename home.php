@@ -70,7 +70,7 @@
                           </a>
                       </h4>
                   </div>
-                  <div id="collapseThree" class="panel-collapse collapse">
+                  <div id="collapseThree" class="panel-collapse collapse in">
                       <div class="panel-body">
                           <!--   <div class="row">
                           <div class="col-md-3">

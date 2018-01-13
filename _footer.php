@@ -60,11 +60,11 @@
         <!----------- Footer ------------>
         <footer class="footer-bs">
             <div class="row">
-                <div class="col-md-3 footer-brand animated fadeInLeft">
+                <div class="col-md-2 footer-brand animated fadeInLeft">
                     <h2>ΙΚΑ</h2>
                     <p>© 2018, All rights reserved</p>
                 </div>
-                <div class="col-md-4 footer-nav animated fadeInUp">
+                <div class="col-md-5 footer-nav animated fadeInUp">
                     <h4>Συχνές ερωτήσεις—</h4>
                     <div class="col-md-6">
                         <ul class="pages">

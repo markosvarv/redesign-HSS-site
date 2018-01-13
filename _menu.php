@@ -53,7 +53,7 @@
                       </li>
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Συχνές Ερωτήσεις/Δικαιολογητικά</a></h4>Όπως: Εκδοση ΑΜΚΑ, ..., ....
+                          <h4 class="media-heading"><a href="/">Δικαιολογητικά</a></h4>Όπως: Εκδοση ΑΜΚΑ, ..., ....
                         </div>
                       </li>
                     </ul>
@@ -111,7 +111,7 @@
                       </li>
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Συχνές Ερωτήσεις/Δικαιολογητικά</a></h4>Όπως: Ασφάλιση Υπαλλήλων, ..., ....
+                          <h4 class="media-heading"><a href="/">Δικαιολογητικά</a></h4>Όπως: Ασφάλιση Υπαλλήλων, ..., ....
                         </div>
                       </li>
                     </ul>
@@ -163,7 +163,7 @@
                       </li>
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Συχνές Ερωτήσεις/Δικαιολογητικά</a></h4>Όπως: Δικαιολογητικά χορήγησης σύνταξης, ..., ....
+                          <h4 class="media-heading"><a href="/">Δικαιολογητικά</a></h4>Όπως: Δικαιολογητικά χορήγησης σύνταξης, ..., ....
                         </div>
                       </li>
                     </ul>
