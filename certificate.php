@@ -1,3 +1,8 @@
+<?php
+include ('_session.php');
+only_loggedin($conn);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <html>
@@ -90,32 +95,36 @@
                         <h4>Στοιχεία Ασφαλισμένου</h4>
                         <p>Το πιστοποιητικό θα εκδοθεί στα παρακάτω στοιχεία:</p>
 
-                        <div class="row col-md-6">
+                        <div class="col-md-6">
                             <div class ="row">
-                                <label class="col-md-2">Όνομα:</label>
-                                <p class="col-md-8">Σούλα</p>
+                                <label class="col-md-4">Όνομα:</label>
+                                <p class="col-md-8"><?= $user['firstName']?></p>
                             </div>
                             <div class ="row">
-                                <label class="col-md-2">Επίθετο:</label>
-                                <p class="col-md-8">Κατσουλίδου</p>
+                                <label class="col-md-4">Επίθετο:</label>
+                                <p class="col-md-8"><?= $user['lastName'] ?></p>
                             </div>
                             <div class ="row">
-                                <label class="col-md-2">Περιοχή:</label>
-                                <p class="col-lg-8">Πεισίστρατου 56, Μαρούσι</p>
+                                <label class="col-md-4">Email:</label>
+                                <p class="col-md-8"><?= $user['email']?></p>
+                            </div>
+                            <div class ="row">
+                                <label class="col-md-4">Ημ/νία Γέννησης:</label>
+                                <p class="col-md-8"><?= $user['birthday']?></p>
                             </div>
                         </div>
-                        <div class="row col-md-6">
+                        <div class="col-md-6">
                             <div class ="row">
-                                <label class="col-md-2">ΑΜΚΑ:</label>
-                                <p class="col-md-8">3107195200023</p>
+                                <label class="col-md-4">ΑΜΚΑ:</label>
+                                <p class="col-md-8"><?= $user['amka']?></p>
                             </div>
                             <div class ="row">
-                                <label class="col-md-2">ΑΜΑ:</label>
-                                <p class="col-md-8">3107195200023</p>
+                                <label class="col-md-4">Περιοχή:</label>
+                                <p class="col-lg-8"><?= $user['address'] ?></p>
                             </div>
                             <div class ="row">
-                                <label class="col-md-2">ΑΦΜ:</label>
-                                <p class="col-md-8">8587697093</p>
+                                <label class="col-md-4">Τηλέφωνο:</label>
+                                <p class="col-md-8"><?= $user['phone']?></p>
                             </div>
                         </div>
 
