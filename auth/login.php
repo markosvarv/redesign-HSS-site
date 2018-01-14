@@ -69,7 +69,7 @@
             <div class="col-md-4">
             </div>
             <div class="col-md-4">
-              <input type="submit" value="Εγγραφή" class="btn btn-primary btn-lg btn-block">
+              <input type="submit" value="Σύνδεση" class="btn btn-primary btn-lg btn-block">
             </div>
           </div> 
             <a style="font-size: 18px;" href="/auth/register.php">Δεν έχετε  Λογαριασμό; </a>       

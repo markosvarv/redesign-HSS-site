@@ -24,7 +24,7 @@ only_loggedin($conn);
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Request</title>
+    <title>Υποβολή Ενσήμων</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -72,13 +72,13 @@ only_loggedin($conn);
                             <div class="form-group">
                                 <label for="inputAMKA-employee" class="col-sm-4 control-label">ΑΜΚΑ Εργαζομένου:</label>
                                 <div class="col-sm-6">
-                                    <input type="number" class="form-control" id="inputAMKA-employee" name="employee_amka">
+                                    <input type="number" class="form-control" id="inputAMKA-employee" name="employee_amka" value="<?= $_SESSION['insurance_employee_amka']?>" >
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputSalary" class="col-sm-4 control-label">Μισθός:</label>
                                 <div class="col-sm-6">
-                                    <input type="number" class="form-control" id="inputSalary" name="salary">
+                                    <input type="number" class="form-control" id="inputSalary" name="salary" value="<?= $_SESSION['insurance_salary']?>">
                                 </div>
                             </div>
                         </div>

@@ -113,7 +113,7 @@
                             <h4>Ηλεκτρονικές Υπηρεσίες</h4>
                             <ul style="list-style-type: none;">
                                 <li>
-                                    <h5 class="media-heading"><a href="request.php">Υποβολή Ενσήμων</a></h5>
+                                    <h5 class="media-heading"><a href="/eservices/request.php">Υποβολή Ενσήμων</a></h5>
                                 </li>
                                 <li>
                                     <h5 class="media-heading"><a href="/">Καταχώρηση Υπαλλήλων</a></h5>
