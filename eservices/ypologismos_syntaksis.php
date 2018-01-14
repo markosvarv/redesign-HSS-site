@@ -57,10 +57,10 @@
       <?php include('../_menu.php'); ?>
       <?php include('../_flush.php'); ?>
       <div id="body">
-		<ul class="breadcrumb">
-			<li><a href="/index.php">Αρχική Σελίδα</a></li>
-			<li>Υπολογισμός Σύνταξης</li>
-		</ul>
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/index.php">Αρχική Σελίδα</a></li>
+              <li class="breadcrumb-item active">Υπολογισμός Σύνταξης</li>
+          </ol>
 
 		<h1>Αυτόματος Υπολογισμός Βασικού Ποσού Σύνταξης</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac ipsum lacus. Integer rutrum mauris velit, non accumsan dolor congue ac. Aenean gravida diam neque, at cursus nisl placerat a. Integer sit amet risus congue, fringilla odio vel, feugiat leo. Donec rhoncus mauris ac velit pulvinar, non efficitur ipsum consequat</p>

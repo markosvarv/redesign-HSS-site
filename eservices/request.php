@@ -54,7 +54,7 @@ only_loggedin($conn);
     <?php include('../_flush.php'); ?>
     <div id="body">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/index.php">Αρχική Σελίδα</a></li>
+            <li class="breadcrumb-item"><a href="/home.php">Αρχική Σελίδα</a></li>
             <li class="breadcrumb-item active">Υποβολή ενσήμων</li>
         </ol>
 

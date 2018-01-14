@@ -25,7 +25,7 @@ only_loggedin($conn);
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Έκδοση Πιστοποιητικού Online</title>
+    <title>ΙΚΑ | Έκδοση Πιστοποιητικού Online</title>
 
     <style type="text/css">
         @media print {
@@ -81,7 +81,7 @@ only_loggedin($conn);
     <div id="body">
 
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Αρχική Σελίδα</a></li>
+            <li class="breadcrumb-item"><a href="/home.php">Αρχική Σελίδα</a></li>
             <li class="breadcrumb-item active">Έκδοση Πιστοποιητικού Online</li>
         </ol>
 
