@@ -1,3 +1,7 @@
+<?php 
+  include ('_session.php');
+  only_loggedin($conn);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,12 +48,11 @@
       <h1>Επεξεργασία Προφίλ</h1>
       <div class="editprofile_cont" id="body">
         <div class="row">
-                    <form class="form-horizontal">
-                        <h2>Επεξεργασία Στοιχείων Λογαριασμού</h2>
+                    <form class="form-horizontal" style="padding: 25px;" method="post" action="/auth/authenticate.php?a=update">
                         <div class="row">
                             <div class="col-lg-2">
                                 <img src="http://dsi-vd.github.io/patternlab-vd/images/fpo_avatar.png" class="img-circle img-thumbnail" alt="Cinque Terre">
-                                <button type="button" class="btn btn-link center-block">Αλλαγή Φωτογραφίας</button>
+                                <!-- <button type="button" class="btn btn-link center-block">Αλλαγή Φωτογραφίας</button> -->
                             </div>
                             <div class="col-lg-10">
                                 <div class="form-group">

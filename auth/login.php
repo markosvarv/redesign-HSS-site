@@ -39,7 +39,7 @@
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
       <?php include('../_menu.php'); ?>
-      <?php include('../flush.php'); ?>
+      <?php include('../_flush.php'); ?>
       <ul class="breadcrumb">
         <li><a href="#">Αρχική Σελίδα</a></li>
         <li>Σύνδεση</li>

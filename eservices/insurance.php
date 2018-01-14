@@ -51,6 +51,9 @@
 	// 		return false;
 	// 	}
 	// }
+	foreach($_POST as $p_key => $p_value){
+		$_SESSION["insurance_".$p_key] = $p_value;
+	}
 
 	if($action == "add_monthly_insurance" && $_SERVER['REQUEST_METHOD'] == 'POST'){
 	 	if (add_monthly_insurance($conn, $user['id'], $_POST['employee_amka'], $_POST['salary'], $_POST['year'], $_POST['month'])){
