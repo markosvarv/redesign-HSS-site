@@ -66,19 +66,19 @@ only_loggedin($conn);
         <div class="panel panel-primary">
             <div class="panel-heading"> <h4>Στοιχεία Εργαζομένου</h4></div>
             <div class="panel-body">
-                <form class="form-horizontal" >
+                <form class="form-horizontal" action = "insurance.php?a=add_monthly_insurance" method="post">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="inputAMKA-employee" class="col-sm-4 control-label">ΑΜΚΑ Εργαζομένου:</label>
                                 <div class="col-sm-6">
-                                    <input type="number" class="form-control" id="inputAMKA-employee">
+                                    <input type="number" class="form-control" id="inputAMKA-employee" name="employee_amka">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputSalary" class="col-sm-4 control-label">Μισθός:</label>
                                 <div class="col-sm-6">
-                                    <input type="number" class="form-control" id="inputSalary">
+                                    <input type="number" class="form-control" id="inputSalary" name="salary">
                                 </div>
                             </div>
                         </div>
@@ -86,7 +86,7 @@ only_loggedin($conn);
                             <div class="form-group">
                                 <label for="inputMonths" class="col-sm-2 control-label">Μήνας:</label>
                                 <div class="col-sm-6">
-                                    <select class="form-control" required>
+                                    <select class="form-control" name="month" required>
                                         <option disabled selected value style="display:none">Επιλέξτε Μήνα</option>
                                         <?php for ($month = 1; $month <= 12; $month++) { ?>
                                             <option value="<?php echo strlen($month)==1 ? '0'.$month : $month; ?>"><?php echo strlen($month)==1 ? '0'.$month : $month; ?></option>
@@ -97,7 +97,7 @@ only_loggedin($conn);
                             <div class="form-group">
                                 <label for="inputMonths" class="col-sm-2 control-label">Έτος:</label>
                                 <div class="col-sm-6">
-                                    <select class="form-control" required>
+                                    <select class="form-control" name = "year" required>
                                         <?php
                                         for ($i=2017; $i >= 1980; $i--) {
                                             echo "<option>".$i."</option>\n";
