@@ -60,12 +60,13 @@
         <div class="col-lg-6">
           <h2>Δημοφιλή στο IKA.gr</h2>
           <div id="tagCloud">
-            <a href="/" class="tier1">ΑΜΚΑ</a>
-            <a href="/ypologismos_syntaksis.php" class="tier2">Υπολογισμός Σύνταξης</a>
-            <a href="/" class="tier3">Εκδοση Σύνταξης</a>
-            <a href="/" class="tier2">Νέος Ασφαλισμένος</a>
-            <a href="/" class="tier1">Ηλεκτρονικές Υπηρεσίες</a>
-            <a href="/" class="tier3">Ασφαλιστική Ικανότητα</a>
+            <a href="/404.php" class="tier1">ΑΜΚΑ</a>
+            <a href="/eservices/ypologismos_syntaksis.php" class="tier2">Υπολογισμός Σύνταξης</a>
+            <a href="/eservices/request.php" class="tier3">Υποβολή Ενσήμων</a>
+            <a href="/eservices/404.php" class="tier2">Γιατροί ΕΟΠΥΥ</a>
+              <a href="/faq.php" class="tier3">Συνχές ερωτήσεις</a>
+            <a href="/eservices/certificate.php" class="tier1">Έκδοση Πιστοποιητικού</a>
+
 
           </div>
         </div>
