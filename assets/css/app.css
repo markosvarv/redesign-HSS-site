@@ -108,3 +108,53 @@ html {
     background-color: #f2f2f2;
     padding: 20px;
 }
+
+/*login*/
+.login_cont {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 5px;
+}
+
+.login_cont input[type=text], select, textarea{
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+.login_cont input[type=password], select, textarea{
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+.login_cont input[type=email], select, textarea{
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.login_cont label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+
+
+.login_cont {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.login_cont .link {
+    float: right;
+    width: 200px;
+}
