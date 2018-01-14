@@ -101,3 +101,10 @@ html {
     float: right;
     width: 200px;
 }
+
+/*editprofile.php*/
+.editprofile_cont {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
