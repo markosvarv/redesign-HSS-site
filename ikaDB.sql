@@ -70,7 +70,7 @@ CREATE TABLE `users` (
   `birthday` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `amka` (`amka`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -79,7 +79,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (17,'Spyros','Spyros','spyrosavl@gmail.com','2018-01-08 17:26:11','8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92',NULL,NULL,NULL,NULL,NULL,NULL),(18,'Spyros','Avlonitis','spyrosavl1@gmail.com','2018-01-10 16:58:16','8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92',NULL,NULL,'578277278','6982140568','zxdfdfsd61 ds616','2018-01-16');
+INSERT INTO `users` VALUES (17,'Spyros','Spyros','spyrosavl@gmail.com','2018-01-08 17:26:11','8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92',NULL,NULL,NULL,NULL,NULL,NULL),(18,'Spyros','Avlonitis','spyrosavl1@gmail.com','2018-01-14 18:09:52','8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92',NULL,NULL,'578277278','6982140569','zxdfdfsd61 ds616 15','2018-01-16'),(19,'dssdf','dfssfd','spyrosavl2@gmail.com','2018-01-14 18:15:32','03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4',NULL,NULL,'1661616','6161611156','dsfsd','1996-01-05');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -92,4 +92,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-11 16:42:17
+-- Dump completed on 2018-01-14 21:07:22
