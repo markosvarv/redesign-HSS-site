@@ -115,10 +115,11 @@
                     </div>
                 </div>
             </div>
+            <h3>Συχνές Εργασίες</h3>
             <div class="btn-group" role="group" aria-label="...">
-                <a class="btn btn-primary btn-lg" href="#" role="button">Προσθήκη Μηνιαίας Ασφάλισης</a>
-                <a class="btn btn-default btn-lg" href="#" role="button">Αναζήτηση Γιατρού ΕΟΠΥΥ</a>
-                <a class="btn btn-info btn-lg" href="#" role="button">Περισσότερες Υπηρεσίες...</a>
+                <a class="btn btn-primary btn-lg" href="/eservices/certificate.php" role="button">Έκδοση Πιστοποιητικού</a>
+                <a class="btn btn-default btn-lg" href="/eservices/request.php" role="button">Υποβολή Ενσήμων</a>
+                <a class="btn btn-info btn-lg" href="/eservices/ypologismos_syntaksis.php" role="button">Υπολογισμός Σύνταξης</a>
             </div>
 
 
