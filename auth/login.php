@@ -71,12 +71,6 @@
           </div> 
             <a style="font-size: 18px;" href="/auth/register.php">Δεν έχετε  Λογαριασμό; </a>       
       </div>
-      <?php include('./_footer.php'); ?>
-      <script type="text/javascript">
-        $('#newsTabs a').click(function (e) {
-          e.preventDefault();
-          $(this).tab('show');
-        })
-      </script>
+      <?php include('../_footer.php'); ?>
   </body>
 </html>
