@@ -287,7 +287,7 @@
         <li><a href="/ServicePoints.php" class="dropdown-toggle">Σημεία Εξυπηρέτησης</a></li>
 
         <li style="width: 210px;" id="menuSearch">
-          <form class="navbar-form" role="search">
+          <form class="navbar-form" role="search" action="/faq.php">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Αναζήτηση" name="q">
               <div class="input-group-btn">

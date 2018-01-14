@@ -89,7 +89,7 @@ only_loggedin($conn);
                                     <select class="form-control" name="month" required>
                                         <option disabled selected value style="display:none">Επιλέξτε Μήνα</option>
                                         <?php for ($month = 1; $month <= 12; $month++) { ?>
-                                            <option value="<?php echo strlen($month)==1 ? '0'.$month : $month; ?>"><?php echo strlen($month)==1 ? '0'.$month : $month; ?></option>
+                                            <option <?php echo ($month == $_SESSION['insurance_month']) ? 'selected' : ''; ?> value="<?php echo strlen($month)==1 ? '0'.$month : $month; ?>"><?php echo strlen($month)==1 ? '0'.$month : $month; ?></option>
                                         <?php } ?>
                                     </select>
                                 </div>
@@ -100,7 +100,7 @@ only_loggedin($conn);
                                     <select class="form-control" name = "year" required>
                                         <?php
                                         for ($i=2017; $i >= 1980; $i--) {
-                                            echo "<option>".$i."</option>\n";
+                                            echo "<option ".(($i == $_SESSION['insurance_year']) ? 'selected' : '').">".$i."</option>\n";
                                         }
                                         ?>
                                     </select>
