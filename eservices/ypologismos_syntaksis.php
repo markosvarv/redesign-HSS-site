@@ -1,5 +1,5 @@
 <?php 
-  include ('_session.php');
+  include ('../auth/_session.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Optional theme -->
-    <link href="./assets/css/justified-nav.css" rel="stylesheet">
-    <link href="./assets/css/theme.css" rel="stylesheet">
-    <link href="./assets/css/yamm.css" rel="stylesheet">
-    <link href="./assets/css/app.css" rel="stylesheet">
+    <link href="/assets/css/justified-nav.css" rel="stylesheet">
+    <link href="/assets/css/theme.css" rel="stylesheet">
+    <link href="/assets/css/yamm.css" rel="stylesheet">
+    <link href="/assets/css/app.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -54,8 +54,8 @@
 
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
-      <?php include('./_menu.php'); ?>
-      <?php include('./flush.php'); ?>
+      <?php include('../_menu.php'); ?>
+      <?php include('../_flush.php'); ?>
       <div id="body">
 		<ul class="breadcrumb">
 			<li><a href="#">Αρχική Σελίδα</a></li>
@@ -169,6 +169,7 @@
 				$res->execute(array(':id' => $user["id"]));
 				$incusrance_months = $res->fetchAll(PDO::FETCH_ASSOC);
 				foreach ($incusrance_months as $month) {
+					$total_days += 30;
 					$res = $conn->prepare("SELECT * FROM users WHERE id = :id LIMIT 1");
 					$res->execute(array(':id' => $month['employer']));
 				}
@@ -253,7 +254,7 @@
       	<?php endif; ?>
 
       </div>
-      <?php include('./_footer.php'); ?>
+      <?php include('../_footer.php'); ?>
       <script type="text/javascript">
         $("#organismos, #type").change(function() {
         	if($("#organismos").val() && $("#type").val() ){

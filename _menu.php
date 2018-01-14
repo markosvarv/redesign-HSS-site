@@ -1,13 +1,6 @@
 
 <?php 
-  include ('db_connection.php');
-  if(isset($_SESSION["user_id"])){
-    $res = $conn->prepare("SELECT * FROM users WHERE id = :id LIMIT 1");
-    $res->execute(array(':id' => $_SESSION["user_id"]));
-    if ($res->rowCount() == 1){
-      $user = ($res->fetchAll(PDO::FETCH_ASSOC))[0];
-    }
-  }
+  include_once('./auth/_session.php');
 ?>
 
 <div class="right-tools pull-right">
@@ -18,9 +11,9 @@
 
     
     <?php if (isset($user)): ?>
-      <span class="glyphicon glyphicon-user"></span> <a href="/home.php"><?= $user['firstName'] ?> <?= $user['lastName'] ?></a> / <a href="/authenticate.php?a=logout">Αποσύνδεση</a> 
+      <span class="glyphicon glyphicon-user"></span> <a href="/home.php"><?= $user['firstName'] ?> <?= $user['lastName'] ?></a> / <a href="/auth/authenticate.php?a=logout">Αποσύνδεση</a> 
     <?php else: ?>
-      <a href="/login.php">Σύνδεση</a> / <a href="/register.php">Εγγραφή</a>  
+      <a href="/auth/login.php">Σύνδεση</a> / <a href="/auth/register.php">Εγγραφή</a>  
     <?php endif; ?>
 
     <span id="phone_and_email">| <strong><span class="glyphicon glyphicon-earphone"></span>21045454545 <span class="glyphicon glyphicon-envelope"></span> info@ika.gr </span></strong>| <a href="/">English</a>
@@ -47,19 +40,29 @@
                     <ul class="media-list">
                       <li class="media">
                         <div class="media-body">
-
-                          <h4 class="media-heading"><a href="/">Ηλεκτρονικές Υπηρεσίες</a></h4>Όπως: Υπολογισμός Ενσήμων, ..., ....
-                        </div>
+                            <h4>Ηλεκτρονικές Υπηρεσίες</h4>
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <h5 class="media-heading"><a href="/eservices/certificate.php">Έκδοση Πιστοποιητικού</a></h5>
+                                </li>
+                                <li>
+                                    <h5 class="media-heading"><a href="">Εξέλιξη Αιτήματος</a></h5>
+                                </li>
+                                <li>
+                                    <h5 class="media-heading"><a href="/">Υπηρεσίες προς Α.Μ.Ε.Α.</a></h5>
+                                </li>
+                            </ul>
+                        <div>
                       </li>
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Δικαιολογητικά</a></h4>Όπως: Εκδοση ΑΜΚΑ, ..., ....
+                          <h4 class="media-heading"><a href="/">Πληροφορίες / Δικαιολογητικά</a></h4>Όπως: Εκδοση ΑΜΚΑ, ..., ....
                         </div>
                       </li>
                     </ul>
                   </div>
                   <div class="col-md-6">
-                    <h4>Δημοφιλέις Εργασίες</h4>
+                    <h4>Δημοφιλείς Εργασίες</h4>
                     <ul style="list-style-type: none;">
                       <li>
                         <h5 class="media-heading"><a href="/">Νέος Ασφαλισμένος</a></h5>
@@ -78,7 +81,7 @@
                   <div class="col-md-12">
                     <br/>
                     <!-- searchbar -->
-                    <form class="" role="search" action="search.php">
+                    <form class="" role="search" action="/faq.php">
                       <h5>Αναζήτηση</h5>
                       <div class="input-group" style="width: 100%;">
                         <input type="hidden" name="c" value="Ασφαλισμένοι">
@@ -106,18 +109,33 @@
                     <ul class="media-list">
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Ηλεκτρονικές Υπηρεσίες</a></h4>Όπως: Καταχώριση Υπαλλήλων, ..., ....
+<!--                          <h4 class="media-heading"><a href="/">Ηλεκτρονικές Υπηρεσίες</a></h4>Όπως: Καταχώριση Υπαλλήλων, ..., ....-->
+                            <h4>Ηλεκτρονικές Υπηρεσίες</h4>
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <h5 class="media-heading"><a href="request.php">Υποβολή Ενσήμων</a></h5>
+                                </li>
+                                <li>
+                                    <h5 class="media-heading"><a href="/">Καταχώρηση Υπαλλήλων</a></h5>
+                                </li>
+                                <li>
+                                    <h5 class="media-heading"><a href="/">Υποβολή Α.Π.Δ.</a></h5>
+                                </li>
+                                <li>
+                                    <h5 class="media-heading"><a href="/">Έκδοση Ατομικού Λογαριασμού Ασφάλισης</a></h5>
+                                </li>
+                            </ul>
                         </div>
                       </li>
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Δικαιολογητικά</a></h4>Όπως: Ασφάλιση Υπαλλήλων, ..., ....
+                          <h4 class="media-heading"><a href="/">Πληροφορίες / Δικαιολογητικά</a></h4>Όπως: Ασφάλιση Υπαλλήλων, ..., ....
                         </div>
                       </li>
                     </ul>
                   </div>
                   <div class="col-md-6">
-                    <h4>Δημοφιλέις Εργασίες</h4>
+                    <h4>Δημοφιλείς Εργασίες</h4>
                     <ul style="list-style-type: none;">
                       <li>
                         <h5 class="media-heading"><a href="/">Καταχώριση Υπαλλήλων</a></h5>
@@ -130,7 +148,7 @@
                   <div class="col-md-12">
                     <br/>
                     <!-- searchbar -->
-                    <form class="" role="search" action="search.php">
+                    <form class="" role="search" action="/faq.php">
                       <h5>Αναζήτηση</h5>
                       <div class="input-group" style="width: 100%;">
                         <input type="text" class="form-control" placeholder="Αναζήτηση στην κατηγορία 'Εργοδότες'" name="q">
@@ -158,18 +176,33 @@
                     <ul class="media-list">
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Ηλεκτρονικές Υπηρεσίες</a></h4>Όπως: Υπολογισμός Σύνταξης, ..., ....
+<!--                          <h4 class="media-heading"><a href="/">Ηλεκτρονικές Υπηρεσίες</a></h4>Όπως: Υπολογισμός Σύνταξης, ..., ....-->
+                            <h4>Ηλεκτρονικές Υπηρεσίες</h4>
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <h5 class="media-heading"><a href="ypologismos_syntaksis.php">Υπολογισμός Σύνταξης</a></h5>
+                                </li>
+                                <li>
+                                    <h5 class="media-heading"><a href="/">Βεβαίωση Συντάξεων</a></h5>
+                                </li>
+                                <li>
+                                    <h5 class="media-heading"><a href="/">Ενημερωτικό Σημείωμα Συντάξεων</a></h5>
+                                </li>
+                                <li>
+                                    <h5 class="media-heading"><a href="/">Πορείας Αίτησης Συνταξιοδότησης</a></h5>
+                                </li>
+                            </ul>
                         </div>
                       </li>
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Δικαιολογητικά</a></h4>Όπως: Δικαιολογητικά χορήγησης σύνταξης, ..., ....
+                          <h4 class="media-heading"><a href="/">Πληροφορίες / Δικαιολογητικά</a></h4>Όπως: Δικαιολογητικά χορήγησης σύνταξης, Οδηγός Θεμελίωσης Συνταξιοδοτικού Δικαιώματος, ....
                         </div>
                       </li>
                     </ul>
                   </div>
                   <div class="col-md-6">
-                    <h4>Δημοφιλέις Εργασίες</h4>
+                    <h4>Δημοφιλείς Εργασίες</h4>
                     <ul style="list-style-type: none;">
                       <li>
                         <h5 class="media-heading"><a href="/ypologismos_syntaksis.php">Υπολογισμός Σύνταξης</a></h5>
@@ -182,7 +215,7 @@
                   <div class="col-md-12">
                     <br/>
                     <!-- searchbar -->
-                    <form class="" role="search" action="search.php">
+                    <form class="" role="search" action="/faq.php">
                       <h5>Αναζήτηση</h5>
                       <div class="input-group" style="width: 100%;">
                         <input type="text" class="form-control" placeholder="Αναζήτηση στην κατηγορία 'Συντάξεις'" name="q">
@@ -236,7 +269,7 @@
                   <div class="col-md-12">
                     <br/>
                     <!-- searchbar -->
-                    <form class="" role="search" action="search.php">
+                    <form class="" role="search" action="/faq.php">
                       <h5>Αναζήτηση</h5>
                       <div class="input-group" style="width: 100%;">
                         <input type="text" class="form-control" placeholder="Αναζήτηση στην κατηγορία 'Συνεργάτες'" name="q">

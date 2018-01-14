@@ -1,6 +1,6 @@
 <?php 
-	include ('db_connection.php');
-	include ('_session.php');
+	include ('../auth/db_connection.php');
+	include ('../auth/_session.php');
 	only_loggedin($conn);
 
 	$action = $_GET['a'];

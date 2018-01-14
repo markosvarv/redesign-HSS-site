@@ -1,5 +1,6 @@
 <?php 
 	include ('db_connection.php');
+	session_start();
 	$action = $_GET['a'];
 
 
@@ -102,11 +103,15 @@
 	// 	if (login($conn, $_POST['email'], $_POST['password'])){
 	if($action == "login" && $_SERVER['REQUEST_METHOD'] == 'GET'){
 		if (login($conn, "spyrosavl1@gmail.com", "123456")){
-			header("Location: /home.php");
+			if(isset($_SESSION['last_page'])){
+				header("Location: ".$_SESSION['last_page']);
+			}else{
+				header("Location: /home.php");
+			}
 			die();
 		}else{
 			$_SESSION['flush']['error'] = "Τα στοιχεία σύνδεσης είναι λάθος!";
-			header("Location: /login.php");
+			header("Location: /auth/login.php");
 			die();
 		}
 	}elseif ($action == "register" && $_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -115,10 +120,10 @@
 		}
 		if (register($conn, $_POST['firstName'], $_POST['lastName'], $_POST['email'], $_POST['password'], $_POST['passwordConfirmation'], $_POST['birthday'], $_POST['amka'], $_POST['address'], $_POST['phone'])){
 			$_SESSION['flush']['success'] = "Επιτυχής εγγραφή!Τώρα μπορείτε να συνδεθείτε!";
-			header("Location: /login.php");
+			header("Location: /auth/login.php");
 			die();
 		}else{
-			header("Location: /register.php");
+			header("Location: /auth/register.php");
 			die();
 		}
 	}elseif ($action == "update" && $_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -126,11 +131,11 @@
 			if (update($conn, $_POST['firstName'], $_POST['lastName'], $_POST['email'], $_POST['password'], $_POST['passwordConfirmation'], $_POST['birthday'], $_POST['amka'], $_POST['address'], $_POST['phone'])){
 				$_SESSION['flush']['success'] = "Επιτυχής αποθήκευση!";
 			}
-			header("Location: /update_profile.php");
+			header("Location: /auth/editprofile.php");
 			die();
 		}else{
 			$_SESSION['flush']['error'] = "Παρακαλώ συνδεθείτε πρώτα!";
-			header("Location: /");
+			header("Location: /auth/login.php");
 			die();
 		}
 	}elseif ($action == "logout" && $_SERVER['REQUEST_METHOD'] == 'GET') {

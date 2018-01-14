@@ -37,14 +37,14 @@
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
       <?php include('./_menu.php'); ?>
-      <?php include('./flush.php'); ?>
+      <?php include('./_flush.php'); ?>
       <div id="body">
       <!-- Jumbotron -->
       <div class="jumbotron">
         <h1>Καλωσήρθες στον ιστοχώρο του <span style="color:#f48e40;">ΙΚΑ</span></h1>
         <p class="lead">Δοκίμασε να πλοηγηθείς μέσω του menu ή να πληκρολογίσεις το ερώτημα σου απο κάτω.</p>
 
-        <form class="form-horizontal" role="search" action="search.php">
+        <form class="form-horizontal" role="search" action="/faq.php">
             <div class="input-group">
               <input class="form-control input-lg" placeholder="Αναζήτηση" name="q" type="text">
               <div class="input-group-btn">

@@ -1,5 +1,7 @@
 <?php
-	session_start();
+	if (session_status() == PHP_SESSION_NONE) {
+		session_start();
+	}
 	if ($_SESSION['flush'] && $_SESSION['flush']['error']){
 		echo '<div class="alert alert-danger">
   			<strong>Error!</strong> '.$_SESSION['flush']['error'].'

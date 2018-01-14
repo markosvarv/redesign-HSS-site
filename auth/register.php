@@ -15,10 +15,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Optional theme -->
-    <link href="./assets/css/justified-nav.css" rel="stylesheet">
-    <link href="./assets/css/theme.css" rel="stylesheet">
-    <link href="./assets/css/yamm.css" rel="stylesheet">
-    <link href="./assets/css/app.css" rel="stylesheet">
+    <link href="/assets/css/justified-nav.css" rel="stylesheet">
+    <link href="/assets/css/theme.css" rel="stylesheet">
+    <link href="/assets/css/yamm.css" rel="stylesheet">
+    <link href="/assets/css/app.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -36,8 +36,8 @@
 
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
-      <?php include('./_menu.php'); ?>
-      <?php include('./flush.php'); ?>
+      <?php include('../_menu.php'); ?>
+      <?php include('../_flush.php'); ?>
       <ul class="breadcrumb">
         <li><a href="#">Αρχική Σελίδα</a></li>
         <li>Εγγραφή</li>
@@ -134,7 +134,7 @@
             </div>
           </div>        
       </div>
-      <?php include('./_footer.php'); ?>
+      <?php include('../_footer.php'); ?>
       <script type="text/javascript">
         $('#newsTabs a').click(function (e) {
           e.preventDefault();
