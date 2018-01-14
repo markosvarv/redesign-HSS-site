@@ -51,7 +51,7 @@
          <!--  </div>
         </div> -->
         <h1>Εγγραφή</h1>
-        <form action="/authenticate.php?a=register" method="post">
+        <form action="/auth/authenticate.php?a=register" method="post">
           <div class="row">
             <div class="col-md-4">
               <label for="mail">Διεύθυνση Ηλεκτρονικού Ταχυδρομείου*</label>

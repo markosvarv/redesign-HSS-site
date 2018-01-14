@@ -3,7 +3,7 @@
 	$user = null ;
 	session_start();
 	$current_page = basename($_SERVER['PHP_SELF']);
-	if( $current_page != "login.php" &&  $current_page != "register.php" && $current_page != "index.php" ){
+	if( $current_page != "login.php" &&  $current_page != "register.php" && $current_page != "index.php" && $current_page != "authenticate.php" ){
 		$_SESSION['last_page'] = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 	}
 
