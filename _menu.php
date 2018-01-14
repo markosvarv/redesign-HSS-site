@@ -46,10 +46,10 @@
                                     <h5 class="media-heading"><a href="/eservices/certificate.php">Έκδοση Πιστοποιητικού</a></h5>
                                 </li>
                                 <li>
-                                    <h5 class="media-heading"><a href="">Εξέλιξη Αιτήματος</a></h5>
+                                    <h5 class="media-heading"><a href="/404.php">Εξέλιξη Αιτήματος</a></h5>
                                 </li>
                                 <li>
-                                    <h5 class="media-heading"><a href="/">Υπηρεσίες προς Α.Μ.Ε.Α.</a></h5>
+                                    <h5 class="media-heading"><a href="/404.php">Υπηρεσίες προς Α.Μ.Ε.Α.</a></h5>
                                 </li>
                             </ul>
                         <div>
@@ -65,16 +65,16 @@
                     <h4>Δημοφιλείς Εργασίες</h4>
                     <ul style="list-style-type: none;">
                       <li>
-                        <h5 class="media-heading"><a href="/">Νέος Ασφαλισμένος</a></h5>
+                        <h5 class="media-heading"><a href="/404.php">Νέος Ασφαλισμένος</a></h5>
                       </li>
                       <li>
-                        <h5 class="media-heading"><a href="/">Ασφαλιστική Ικανότητα</a></h5>
+                        <h5 class="media-heading"><a href="/eservices/certificate.php">Ασφαλιστική Ικανότητα</a></h5>
                       </li>
                       <li>
-                        <h5 class="media-heading"><a href="/">ΑΜΚΑ</a></h5>
+                        <h5 class="media-heading"><a href="/404.php">ΑΜΚΑ</a></h5>
                       </li>
                       <li>
-                        <h5 class="media-heading"><a href="/">Αναζήτηση Γιατρού ΕΟΠΥΥ</a></h5>
+                        <h5 class="media-heading"><a href="/404.php">Αναζήτηση Γιατρού ΕΟΠΥΥ</a></h5>
                       </li>
                     </ul>
                   </div>
@@ -116,13 +116,13 @@
                                     <h5 class="media-heading"><a href="/eservices/request.php">Υποβολή Ενσήμων</a></h5>
                                 </li>
                                 <li>
-                                    <h5 class="media-heading"><a href="/">Καταχώρηση Υπαλλήλων</a></h5>
+                                    <h5 class="media-heading"><a href="/404.php">Καταχώρηση Υπαλλήλων</a></h5>
                                 </li>
                                 <li>
-                                    <h5 class="media-heading"><a href="/">Υποβολή Α.Π.Δ.</a></h5>
+                                    <h5 class="media-heading"><a href="/404.php">Υποβολή Α.Π.Δ.</a></h5>
                                 </li>
                                 <li>
-                                    <h5 class="media-heading"><a href="/">Έκδοση Ατομικού Λογαριασμού Ασφάλισης</a></h5>
+                                    <h5 class="media-heading"><a href="/404.php">Έκδοση Ατομικού Λογαριασμού Ασφάλισης</a></h5>
                                 </li>
                             </ul>
                         </div>
@@ -138,10 +138,7 @@
                     <h4>Δημοφιλείς Εργασίες</h4>
                     <ul style="list-style-type: none;">
                       <li>
-                        <h5 class="media-heading"><a href="/">Καταχώριση Υπαλλήλων</a></h5>
-                      </li>
-                      <li>
-                        <h5 class="media-heading"><a href="/">Εγραφή Εργοδότη</a></h5>
+                        <h5 class="media-heading"><a href="/404.php">Καταχώριση Υπαλλήλων</a></h5>
                       </li>
                     </ul>
                   </div>
@@ -183,13 +180,13 @@
                                     <h5 class="media-heading"><a href="/eservices/ypologismos_syntaksis.php">Υπολογισμός Σύνταξης</a></h5>
                                 </li>
                                 <li>
-                                    <h5 class="media-heading"><a href="/">Βεβαίωση Συντάξεων</a></h5>
+                                    <h5 class="media-heading"><a href="/404.php">Βεβαίωση Συντάξεων</a></h5>
                                 </li>
                                 <li>
-                                    <h5 class="media-heading"><a href="/">Ενημερωτικό Σημείωμα Συντάξεων</a></h5>
+                                    <h5 class="media-heading"><a href="/404.php">Ενημερωτικό Σημείωμα Συντάξεων</a></h5>
                                 </li>
                                 <li>
-                                    <h5 class="media-heading"><a href="/">Πορείας Αίτησης Συνταξιοδότησης</a></h5>
+                                    <h5 class="media-heading"><a href="/404.php">Πορείας Αίτησης Συνταξιοδότησης</a></h5>
                                 </li>
                             </ul>
                         </div>
@@ -208,7 +205,7 @@
                         <h5 class="media-heading"><a href="/eservices/ypologismos_syntaksis.php">Υπολογισμός Σύνταξης</a></h5>
                       </li>
                       <li>
-                        <h5 class="media-heading"><a href="/">Αναζήτηση Γιατρού ΕΟΠΥΥ</a></h5>
+                        <h5 class="media-heading"><a href="/404.php">Αναζήτηση Γιατρού ΕΟΠΥΥ</a></h5>
                       </li>
                     </ul>
                   </div>
@@ -242,12 +239,12 @@
                     <ul class="media-list">
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Συνεργαζόμενοι Ιαρτροί</a></h4>Όπως: Ιστορικό Ασφαλισμένου, ..., ....
+                          <h4 class="media-heading"><a href="/404.php">Συνεργαζόμενοι Ιαρτροί</a></h4>Όπως: Ιστορικό Ασφαλισμένου, ..., ....
                         </div>
                       </li>
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Προγράμματος Κατ' Οίκον Φροντίδας Συνταξιούχων</a></h4>Όπως: Αναθέσεις Περιστατικών, ..., ....
+                          <h4 class="media-heading"><a href="/404.php">Προγράμματος Κατ' Οίκον Φροντίδας Συνταξιούχων</a></h4>Όπως: Αναθέσεις Περιστατικών, ..., ....
                         </div>
                       </li>
                     </ul>
@@ -256,12 +253,12 @@
                     <ul class="media-list">
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Επιτροπές ΚΕ.Π.Α.</a></h4>Όπως: Ιστορικό Επιτροπών, ..., ....
+                          <h4 class="media-heading"><a href="/404.php">Επιτροπές ΚΕ.Π.Α.</a></h4>Όπως: Ιστορικό Επιτροπών, ..., ....
                         </div>
                       </li>
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Εσωτερικές Υπηρεσίες ΙΚΑ</a></h4>Όπως: Εφαρμόγη έκδοσης δικαιολογητικών, ..., ....
+                          <h4 class="media-heading"><a href="/404.php">Εσωτερικές Υπηρεσίες ΙΚΑ</a></h4>Όπως: Εφαρμόγη έκδοσης δικαιολογητικών, ..., ....
                         </div>
                       </li>
                     </ul>
