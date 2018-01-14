@@ -48,29 +48,36 @@
                         <h2>Επεξεργασία Στοιχείων Λογαριασμού</h2>
                         <div class="row">
                             <div class="col-lg-2">
-                                <img src="http://www.espressonews.gr/sites/default/files/field/image/4r34tq345tqw45t_2.jpg" class="img-circle img-thumbnail" alt="Cinque Terre">
+                                <img src="http://dsi-vd.github.io/patternlab-vd/images/fpo_avatar.png" class="img-circle img-thumbnail" alt="Cinque Terre">
                                 <button type="button" class="btn btn-link center-block">Αλλαγή Φωτογραφίας</button>
                             </div>
                             <div class="col-lg-10">
                                 <div class="form-group">
-                                    <label for="inputUsername" class="col-sm-2 control-label">Όνομα Χρήστη</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="inputUsername" value="soulamaroussi">
-                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputEmail" class="col-sm-2 control-label">Email</label>
                                     <div class="col-sm-8">
-                                        <input type="email" class="form-control" id="inputEmail" value="soulamaroussi@gmail.com">
+                                        <input type="email" class="form-control" id="inputEmail" value=<?= $user['email']?>>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-10">
-                                        <button type="button" class="btn btn-default">Αλλαγή Κωδικού</button>
+                              <div class="form-group">
+                                    <label for="OldPassword" class="col-sm-2 control-label">Παλιός Κωδικός</label>
+                                    <div class="col-sm-8">
+                                        <input type="password" class="form-control" id="OldPassword" placeholder="Συμπληρώστε τον Παλιό σας Κωδικό..">
                                     </div>
                                 </div>
-
-
+                              <div class="form-group">
+                                    <label for="NewPassword" class="col-sm-2 control-label">Νέος Κωδικός</label>
+                                    <div class="col-sm-8">
+                                        <input type="password" class="form-control" id="NewPassword" placeholder="Επιλέξτε Νέο Κωδικό..">
+                                    </div>
+                                </div>
+                              <div class="form-group">
+                                    <label for="ConPassword" class="col-sm-2 control-label">Επαλήθευση Νέου Κωδικού</label>
+                                    <div class="col-sm-8">
+                                        <input type="password" class="form-control" id="ConPassword" placeholder="Επαναλάβετε τον Νέο σας Κωδικό..">
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -78,51 +85,37 @@
                         <div class="form-group">
                             <label for="FirstName" class="col-sm-2 control-label">Όνομα</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="FirstName" value="Σούλα" readonly>
+                                <input type="text" class="form-control" id="FirstName" value=<?= $user['firstName']?> readonly>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="LastName" class="col-sm-2 control-label">Επίθετο</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="LastName" value="Κατσουλίδου" readonly>
+                                <input type="text" class="form-control" id="LastName" value=<?= $user['lastName'] ?> readonly>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="Date" class="col-sm-2 control-label">Ημερομηνία Γέννησης</label>
                             <div class="col-sm-8">
-                                <input type="date" id="Date" class ="form"value="1979-12-31" readonly>
+                                <input type="date" id="Date" class ="form"value=<?= $user['birthday']?> readonly>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputHouse" class="col-sm-2 control-label">Κατοικία</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="inputHouse" value="Πεισίστρατου 56, Αμμαρούσιο Αττικής">
+                                <input type="text" class="form-control" id="inputHouse" value=<?= $user['address'] ?>>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputTelephone" class="col-sm-2 control-label">Τηλέφωνο</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="inputTelephone" value="6969696969">
+                                <input type="text" class="form-control" id="inputTelephone" value=<?= $user['phone']?>>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="AMKA" class="col-sm-2 control-label">ΑΜΚΑ</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="AMKA" value="3107195200023" readonly>
-                            </div>
-                        </div>
-
-                        <h2>Στοιχεία Ασφαλισμένου</h2>
-                        <div class="form-group">
-                            <label for="TotalInsTime" class="col-sm-2 control-label">Συνολικός Χρόνος Ασφάλισης</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control" id="TotalInsTime" value="20 Χρόνια, 7 Μήνες, 100 Μέρες" readonly>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="ΑΜΑ" class="col-sm-2 control-label">Αριθμός Μητρώου ΙΚΑ</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control" id="ΑΜΑ" value="9868758654898" readonly>
+                                <input type="text" class="form-control" id="AMKA" value=<?= $user['amka']?> readonly>
                             </div>
                         </div>
                         <div class="form-group">
