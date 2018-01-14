@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/assets/img/favico.ico">
 
-    <title>IKA | FaQ</title>
+    <title>IKA | Πληροφορίες και Δικαιολογητικά</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -38,10 +38,15 @@
            Multiple lines will require custom code not provided by Bootstrap. -->
       <?php include('./_menu.php'); ?>
       <?php include('./_flush.php'); ?>
-      <div id="body">          
+      <div id="body">
+
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/index.php">Αρχική Σελίδα</a></li>
+              <li class="breadcrumb-item active">Πληροφορίες και Δικαιολογητικά</li>
+          </ol>
           
           <div class="jumbotron">
-            <h2>Συχνές ερωτήσεις και απαντήσεις</h2>
+            <h2>Πληροφορίες και Δικαιολογητικά</h2>
             <?php if($_GET['c']): ?>
               <h4>Στην κατηγορία <?= $_GET['c'] ?></h4>
             <?php endif; ?>

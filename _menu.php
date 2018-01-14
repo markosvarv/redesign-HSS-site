@@ -56,7 +56,7 @@
                       </li>
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Πληροφορίες / Δικαιολογητικά</a></h4>Όπως: Εκδοση ΑΜΚΑ, ..., ....
+                          <h4 class="media-heading"><a href="/faq.php?c=Ασφαλισμένοι">Πληροφορίες / Δικαιολογητικά</a></h4>Όπως: Εκδοση ΑΜΚΑ, ..., ....
                         </div>
                       </li>
                     </ul>
@@ -129,7 +129,7 @@
                       </li>
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Πληροφορίες / Δικαιολογητικά</a></h4>Όπως: Ασφάλιση Υπαλλήλων, ..., ....
+                          <h4 class="media-heading"><a href="/faq.php?c=Εργοδότες">Πληροφορίες / Δικαιολογητικά</a></h4>Όπως: Ασφάλιση Υπαλλήλων, ..., ....
                         </div>
                       </li>
                     </ul>
@@ -180,7 +180,7 @@
                             <h4>Ηλεκτρονικές Υπηρεσίες</h4>
                             <ul style="list-style-type: none;">
                                 <li>
-                                    <h5 class="media-heading"><a href="ypologismos_syntaksis.php">Υπολογισμός Σύνταξης</a></h5>
+                                    <h5 class="media-heading"><a href="/eservices/ypologismos_syntaksis.php">Υπολογισμός Σύνταξης</a></h5>
                                 </li>
                                 <li>
                                     <h5 class="media-heading"><a href="/">Βεβαίωση Συντάξεων</a></h5>
@@ -196,7 +196,7 @@
                       </li>
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Πληροφορίες / Δικαιολογητικά</a></h4>Όπως: Δικαιολογητικά χορήγησης σύνταξης, Οδηγός Θεμελίωσης Συνταξιοδοτικού Δικαιώματος, ....
+                          <h4 class="media-heading"><a href="/faq.php?c=Συντάξεις">Πληροφορίες / Δικαιολογητικά</a></h4>Όπως: Δικαιολογητικά χορήγησης σύνταξης, Οδηγός Θεμελίωσης Συνταξιοδοτικού Δικαιώματος, ....
                         </div>
                       </li>
                     </ul>
@@ -205,7 +205,7 @@
                     <h4>Δημοφιλείς Εργασίες</h4>
                     <ul style="list-style-type: none;">
                       <li>
-                        <h5 class="media-heading"><a href="/ypologismos_syntaksis.php">Υπολογισμός Σύνταξης</a></h5>
+                        <h5 class="media-heading"><a href="/eservices/ypologismos_syntaksis.php">Υπολογισμός Σύνταξης</a></h5>
                       </li>
                       <li>
                         <h5 class="media-heading"><a href="/">Αναζήτηση Γιατρού ΕΟΠΥΥ</a></h5>

@@ -58,12 +58,12 @@
     <div id="body">
 
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Αρχική Σελίδα</a></li>
+            <li class="breadcrumb-item"><a href="/index.php">Αρχική Σελίδα</a></li>
             <li class="breadcrumb-item active">Σημεία Εξυπηρέτησης</li>
         </ol>
 
         <div class = "page-header">
-            <h3>Σημεία Εξυπηρέτησης</h3>
+            <h3>ΙΚΑ | Σημεία Εξυπηρέτησης</h3>
         </div>
 
         <div class="row">

@@ -58,97 +58,71 @@
            Multiple lines will require custom code not provided by Bootstrap. -->
       <?php include('_menu.php'); ?>
       <?php include('_flush.php'); ?>
-      <div id="body">
+        <div id="body">
 
+            <h1>Καλωσήλθες στο ΙΚΑ, <?= $user['firstName']?>!</h1>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            Τα στοιχεία μου:
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse in">
+                    <div class="panel-body">
 
-              <h1>Καλωσήλθες στο ΙΚΑ, <?= $user['firstName']?>!</h1>
-              <div class="panel panel-default">
-                  <div class="panel-heading">
-                      <h4 class="panel-title">
-                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                              Τα στοιχεία μου:
-                          </a>
-                      </h4>
-                  </div>
-                  <div id="collapseThree" class="panel-collapse collapse in">
-                      <div class="panel-body">
-                          <!--   <div class="row">
-                          <div class="col-md-3">
-                              <p>Όνοματεπώνυμο</p>
-                              <p>Email</p>
-                              <p>ΑΜΚΑ</p>
-                              <p>Ημερομηνία Γέννησης</p>
-                          </div>
-                          <div class="col-md-3">
-                              <p><strong><?/*= $user['firstName']*/?> <?/*= $user['lastName'] */?></strong></p>
-                              <p><strong><?/*= $user['email']*/?></strong></p>
-                              <p><strong><?/*= $user['amka']*/?></strong></p>
-                              <p><strong><?/*= $user['birthday']*/?></strong></p>
-                          </div>
-                          <div class="col-md-3">
-                              <p>Διεύθυνση</p>
-                              <p>Τηλέφωνο</p>
-                              <p>Ασφαλισμένος</p>
-                          </div>
-                          <div class="col-md-3">
-                              <p><strong><?/*= $user['address'] */?></strong></p>
-                              <p><strong><?/*= $user['phone']*/?></strong></p>
-                              <p><strong><?/*= $user['user_type']*/?></strong></p>
-                          </div>
-                      </div>-->
-
-
-                          <div class="col-md-6">
-                              <div class ="row">
-                                  <label class="col-md-4">Όνομα:</label>
-                                  <p class="col-md-8"><?= $user['firstName']?></p>
-                              </div>
-                              <div class ="row">
-                                  <label class="col-md-4">Επίθετο:</label>
-                                  <p class="col-md-8"><?= $user['lastName'] ?></p>
-                              </div>
-                              <div class ="row">
-                                  <label class="col-md-4">Email:</label>
-                                  <p class="col-md-8"><?= $user['email']?></p>
-                              </div>
-                              <div class ="row">
-                                  <label class="col-md-4">Ημερομηνία Γέννησης:</label>
-                                  <p class="col-md-8"><?= $user['birthday']?></p>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class ="row">
-                                  <label class="col-md-4">ΑΜΚΑ:</label>
-                                  <p class="col-md-8"><?= $user['amka']?></p>
-                              </div>
-                              <div class ="row">
-                                  <label class="col-md-4">Περιοχή:</label>
-                                  <p class="col-lg-8"><?= $user['address'] ?></p>
-                              </div>
-                              <div class ="row">
-                                  <label class="col-md-4">Τηλέφωνο:</label>
-                                  <p class="col-md-8"><?= $user['phone']?></p>
-                              </div>
-                              <!-- <div class ="row">
+                        <div class="col-md-6">
+                            <div class ="row">
+                                <label class="col-md-4">Όνομα:</label>
+                                <p class="col-md-8"><?= $user['firstName']?></p>
+                            </div>
+                            <div class ="row">
+                                <label class="col-md-4">Επίθετο:</label>
+                                <p class="col-md-8"><?= $user['lastName'] ?></p>
+                            </div>
+                            <div class ="row">
+                                <label class="col-md-4">Email:</label>
+                                <p class="col-md-8"><?= $user['email']?></p>
+                            </div>
+                            <div class ="row">
+                                <label class="col-md-4">Ημερομηνία Γέννησης:</label>
+                                <p class="col-md-8"><?= $user['birthday']?></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class ="row">
+                                <label class="col-md-4">ΑΜΚΑ:</label>
+                                <p class="col-md-8"><?= $user['amka']?></p>
+                            </div>
+                            <div class ="row">
+                                <label class="col-md-4">Περιοχή:</label>
+                                <p class="col-lg-8"><?= $user['address'] ?></p>
+                            </div>
+                            <div class ="row">
+                                <label class="col-md-4">Τηλέφωνο:</label>
+                                <p class="col-md-8"><?= $user['phone']?></p>
+                            </div>
+                            <!-- <div class ="row">
                                   <label class="col-md-4">Ασφαλισμένος:</label>
                                   <p class="col-md-8"><?= $user['user_type']?></p>
                               </div> -->
-                          </div>
+                        </div>
 
 
-                          <a style="float: right;" href="/auth/editprofile.php" class="btn btn-default">Επεξεργασία Προφίλ</a>
+                        <a style="float: right;" href="/auth/editprofile.php" class="btn btn-default">Επεξεργασία Προφίλ</a>
 
-                      </div>
-                  </div>
-              </div>
-              <div class="btn-group" role="group" aria-label="...">
-                  <a class="btn btn-primary btn-lg" href="#" role="button">Προσθήκη Μηνιαίας Ασφάλισης</a>
-                  <a class="btn btn-default btn-lg" href="#" role="button">Αναζήτηση Γιατρού ΕΟΠΥΥ</a>
-                  <a class="btn btn-info btn-lg" href="#" role="button">Περισσότερες Υπηρεσίες...</a>
-              </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-group" role="group" aria-label="...">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Προσθήκη Μηνιαίας Ασφάλισης</a>
+                <a class="btn btn-default btn-lg" href="#" role="button">Αναζήτηση Γιατρού ΕΟΠΥΥ</a>
+                <a class="btn btn-info btn-lg" href="#" role="button">Περισσότερες Υπηρεσίες...</a>
+            </div>
 
 
-      </div>
+        </div>
 
       <?php include('_footer.php'); ?>
       <script type="text/javascript">

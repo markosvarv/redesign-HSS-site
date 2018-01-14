@@ -58,7 +58,7 @@
       <?php include('../_flush.php'); ?>
       <div id="body">
 		<ul class="breadcrumb">
-			<li><a href="#">Αρχική Σελίδα</a></li>
+			<li><a href="/index.php">Αρχική Σελίδα</a></li>
 			<li>Υπολογισμός Σύνταξης</li>
 		</ul>
 
