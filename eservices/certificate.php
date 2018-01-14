@@ -69,6 +69,15 @@ only_loggedin($conn);
          Multiple lines will require custom code not provided by Bootstrap. -->
     <?php include('../_menu.php'); ?>
     <?php include('../_flush.php'); ?>
+    <?php 
+        $res = $conn->prepare("SELECT * FROM insurance_month INNER JOIN users ON insurance_month.employer=users.id WHERE employee = :id");
+        $res->execute(array(':id' => $user["id"]));
+        $incusrance_months = $res->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($incusrance_months as $month) {
+            $res = $conn->prepare("SELECT * FROM users WHERE id = :id LIMIT 1");
+            $res->execute(array(':id' => $month['employer']));
+        }
+    ?>
     <div id="body">
 
         <ol class="breadcrumb">
@@ -130,17 +139,40 @@ only_loggedin($conn);
                     </form>
                 </div>
             </div>
-        </div>
-        <div id="results" style="padding: 10px;display: none;">
-            <div class="panel panel-default" style="" id="apotelesmata">
+            <div style="display: none;" class="panel panel-default" style="" id="results">
               <div class="panel-heading">Αποτελέσματα</div>
               <div class="panel-body">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac ipsum lacus. Integer rutrum mauris velit, non accumsan dolor congue ac. Aenean gravida diam neque, at cursus nisl placerat a.</p>
-                <h5>Τελικό πορό σύνταξης: 8569 ευρώ</h5>
+                <table class="table table-striped" id="stoixeia_table">
+                    <thead>
+                        <tr><th>Μήνας</th><th>Έτος</th><th>Εργοδότης</th><th>Αποδοχές σε ευρώ</th><th></th></tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($incusrance_months as $month): ?>
+                            <tr>
+                            <td>
+                                <input class="form-control" required disabled value="<?= $month['month'] ?>">
+                            </td>
+                            <td>
+                                <input class="form-control" required disabled value="<?= $month['year'] ?>">
+                            </td>
+                            <td>
+                                <input class="form-control" required disabled value="<?= $month['firstName'] ?> <?= $month['lastName'] ?>">
+                            </td>
+                            <td>
+                                <input class="form-control" type="number" required disabled value="<?= $month['salary'] ?>">
+                            </td>
+                            <td>    
+                            </td>
+
+                        </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
                 <div class="pull-right">
-                    <button id = "btn1" type="button" class="btn btn-primary btn-lg" disabled><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Κατέβασμα ως pdf</button>
+                    <a href="#" id = "btn3" onclick="print();" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Κατέβασμα ως pdf</a>
                     <button id = "btn2" type="button" class="btn btn-default btn-lg" disabled><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Αποστολή στο email μου</button>
-                    <a href="#" id = "btn3" onclick="print();" class="btn btn-info btn-lg" disabled><span class="glyphicon glyphicon-print" aria-hidden="true"</span> Εκτύπωση</a>
+                    <a href="#" id = "btn3" onclick="print();" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> Εκτύπωση</a>
                 </div>
               </div>
             </div>

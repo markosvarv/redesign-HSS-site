@@ -1,5 +1,6 @@
 <?php 
 	include ('db_connection.php');
+	session_start();
 	$action = $_GET['a'];
 
 
@@ -102,7 +103,11 @@
 	// 	if (login($conn, $_POST['email'], $_POST['password'])){
 	if($action == "login" && $_SERVER['REQUEST_METHOD'] == 'GET'){
 		if (login($conn, "spyrosavl1@gmail.com", "123456")){
-			header("Location: /home.php");
+			if(isset($_SESSION['last_page'])){
+				header("Location: ".$_SESSION['last_page']);
+			}else{
+				header("Location: /home.php");
+			}
 			die();
 		}else{
 			$_SESSION['flush']['error'] = "Τα στοιχεία σύνδεσης είναι λάθος!";

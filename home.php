@@ -56,8 +56,8 @@
 
       <!-- The justified navigation menu is meant for single line per list item.
            Multiple lines will require custom code not provided by Bootstrap. -->
-      <?php include('./_menu.php'); ?>
-      <?php include('./_flush.php'); ?>
+      <?php include('_menu.php'); ?>
+      <?php include('_flush.php'); ?>
       <div id="body">
 
 
@@ -129,14 +129,14 @@
                                   <label class="col-md-4">Τηλέφωνο:</label>
                                   <p class="col-md-8"><?= $user['phone']?></p>
                               </div>
-                              <div class ="row">
+                              <!-- <div class ="row">
                                   <label class="col-md-4">Ασφαλισμένος:</label>
                                   <p class="col-md-8"><?= $user['user_type']?></p>
-                              </div>
+                              </div> -->
                           </div>
 
 
-                          <a style="float: right;" href="/θπδατε.php" class="btn btn-default">Επεξεργασία Προφίλ</a>
+                          <a style="float: right;" href="/auth/editprofile.php" class="btn btn-default">Επεξεργασία Προφίλ</a>
 
                       </div>
                   </div>
@@ -150,7 +150,7 @@
 
       </div>
 
-      <?php include('./_footer.php'); ?>
+      <?php include('_footer.php'); ?>
       <script type="text/javascript">
         $('#newsTabs a').click(function (e) {
           e.preventDefault();

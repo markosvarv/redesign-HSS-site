@@ -44,7 +44,7 @@
         <h1>Καλωσήρθες στον ιστοχώρο του <span style="color:#f48e40;">ΙΚΑ</span></h1>
         <p class="lead">Δοκίμασε να πλοηγηθείς μέσω του menu ή να πληκρολογίσεις το ερώτημα σου απο κάτω.</p>
 
-        <form class="form-horizontal" role="search" action="search.php">
+        <form class="form-horizontal" role="search" action="/faq.php">
             <div class="input-group">
               <input class="form-control input-lg" placeholder="Αναζήτηση" name="q" type="text">
               <div class="input-group-btn">

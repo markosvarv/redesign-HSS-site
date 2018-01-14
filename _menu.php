@@ -1,6 +1,6 @@
 
 <?php 
-  include ('./auth/_session.php');
+  include_once('./auth/_session.php');
 ?>
 
 <div class="right-tools pull-right">
@@ -11,9 +11,9 @@
 
     
     <?php if (isset($user)): ?>
-      <span class="glyphicon glyphicon-user"></span> <a href="/home.php"><?= $user['firstName'] ?> <?= $user['lastName'] ?></a> / <a href="/authenticate.php?a=logout">Αποσύνδεση</a> 
+      <span class="glyphicon glyphicon-user"></span> <a href="/home.php"><?= $user['firstName'] ?> <?= $user['lastName'] ?></a> / <a href="/auth/authenticate.php?a=logout">Αποσύνδεση</a> 
     <?php else: ?>
-      <a href="/login.php">Σύνδεση</a> / <a href="/register.php">Εγγραφή</a>  
+      <a href="/auth/login.php">Σύνδεση</a> / <a href="/auth/register.php">Εγγραφή</a>  
     <?php endif; ?>
 
     <span id="phone_and_email">| <strong><span class="glyphicon glyphicon-earphone"></span>21045454545 <span class="glyphicon glyphicon-envelope"></span> info@ika.gr </span></strong>| <a href="/">English</a>
@@ -43,7 +43,7 @@
                             <h4>Ηλεκτρονικές Υπηρεσίες</h4>
                             <ul style="list-style-type: none;">
                                 <li>
-                                    <h5 class="media-heading"><a href="certificate.php">Έκδοση Πιστοποιητικού</a></h5>
+                                    <h5 class="media-heading"><a href="/eservices/certificate.php">Έκδοση Πιστοποιητικού</a></h5>
                                 </li>
                                 <li>
                                     <h5 class="media-heading"><a href="">Εξέλιξη Αιτήματος</a></h5>
@@ -81,7 +81,7 @@
                   <div class="col-md-12">
                     <br/>
                     <!-- searchbar -->
-                    <form class="" role="search" action="search.php">
+                    <form class="" role="search" action="/faq.php">
                       <h5>Αναζήτηση</h5>
                       <div class="input-group" style="width: 100%;">
                         <input type="hidden" name="c" value="Ασφαλισμένοι">
@@ -148,7 +148,7 @@
                   <div class="col-md-12">
                     <br/>
                     <!-- searchbar -->
-                    <form class="" role="search" action="search.php">
+                    <form class="" role="search" action="/faq.php">
                       <h5>Αναζήτηση</h5>
                       <div class="input-group" style="width: 100%;">
                         <input type="text" class="form-control" placeholder="Αναζήτηση στην κατηγορία 'Εργοδότες'" name="q">
@@ -215,7 +215,7 @@
                   <div class="col-md-12">
                     <br/>
                     <!-- searchbar -->
-                    <form class="" role="search" action="search.php">
+                    <form class="" role="search" action="/faq.php">
                       <h5>Αναζήτηση</h5>
                       <div class="input-group" style="width: 100%;">
                         <input type="text" class="form-control" placeholder="Αναζήτηση στην κατηγορία 'Συντάξεις'" name="q">
@@ -269,7 +269,7 @@
                   <div class="col-md-12">
                     <br/>
                     <!-- searchbar -->
-                    <form class="" role="search" action="search.php">
+                    <form class="" role="search" action="/faq.php">
                       <h5>Αναζήτηση</h5>
                       <div class="input-group" style="width: 100%;">
                         <input type="text" class="form-control" placeholder="Αναζήτηση στην κατηγορία 'Συνεργάτες'" name="q">

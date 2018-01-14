@@ -169,6 +169,7 @@
 				$res->execute(array(':id' => $user["id"]));
 				$incusrance_months = $res->fetchAll(PDO::FETCH_ASSOC);
 				foreach ($incusrance_months as $month) {
+					$total_days += 30;
 					$res = $conn->prepare("SELECT * FROM users WHERE id = :id LIMIT 1");
 					$res->execute(array(':id' => $month['employer']));
 				}
