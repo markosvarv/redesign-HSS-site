@@ -40,10 +40,7 @@
            Multiple lines will require custom code not provided by Bootstrap. -->
       <?php include('../_menu.php'); ?>
       <?php include('../_flush.php'); ?>
-      <ul class="breadcrumb">
-        <li><a href="/index.php">Αρχική Σελίδα</a></li>
-        <li>Εγγραφή</li>
-      </ul>
+
       <div class="registration_cont" id="body">
         <!-- <div class="row">
           <div class="link"> -->

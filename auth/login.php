@@ -40,10 +40,7 @@
            Multiple lines will require custom code not provided by Bootstrap. -->
       <?php include('../_menu.php'); ?>
       <?php include('../_flush.php'); ?>
-      <ul class="breadcrumb">
-        <li><a href="#">Αρχική Σελίδα</a></li>
-        <li>Σύνδεση</li>
-      </ul>
+
       <h1>Σύνδεση Με Λογαριασμό ΙΚΑ</h1>
       <div class="login_cont" id="body">
         <form action="/auth/authenticate.php?a=login" method="post">
