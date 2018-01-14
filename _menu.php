@@ -1,21 +1,7 @@
 
 <?php 
-  include ('db_connection.php');
-  if(isset($_SESSION["user_id"])){
-    $res = $conn->prepare("SELECT * FROM users WHERE id = :id LIMIT 1");
-    $res->execute(array(':id' => $_SESSION["user_id"]));
-    if ($res->rowCount() == 1){
-      $user = ($res->fetchAll(PDO::FETCH_ASSOC))[0];
-    }
-  }
+  include ('./auth/_session.php');
 ?>
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link href="./assets/css/justified-nav.css" rel="stylesheet">
-<link href="./assets/css/theme.css" rel="stylesheet">
-<link href="./assets/css/yamm.css" rel="stylesheet">
-<link href="./assets/css/app.css" rel="stylesheet">
 
 <div class="right-tools pull-right">
   <span id="access">Μέγεθος Γραμμάτων <input  type="range" min="1" max="2" value="1" step="0.5" onchange="$('#body').attr('style', 'font-size: ' + (this.value*100).toString() + '% !important');" ></span>

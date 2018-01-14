@@ -1,5 +1,5 @@
 <?php
-include ('_session.php');
+include ('../auth/_session.php');
 only_loggedin($conn);
 ?>
 
@@ -25,7 +25,7 @@ only_loggedin($conn);
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Certificate</title>
+    <title>Έκδοση Πιστοποιητικού Online</title>
 
     <style type="text/css">
         @media print {
@@ -47,10 +47,10 @@ only_loggedin($conn);
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Optional theme -->
-    <link href="./assets/css/justified-nav.css" rel="stylesheet">
-    <link href="./assets/css/theme.css" rel="stylesheet">
-    <link href="./assets/css/yamm.css" rel="stylesheet">
-    <link href="./assets/css/app.css" rel="stylesheet">
+    <link href="/assets/css/justified-nav.css" rel="stylesheet">
+    <link href="/assets/css/theme.css" rel="stylesheet">
+    <link href="/assets/css/yamm.css" rel="stylesheet">
+    <link href="/assets/css/app.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -67,8 +67,8 @@ only_loggedin($conn);
 
     <!-- The justified navigation menu is meant for single line per list item.
          Multiple lines will require custom code not provided by Bootstrap. -->
-    <?php include('./_menu.php'); ?>
-    <?php include('./flush.php'); ?>
+    <?php include('../_menu.php'); ?>
+    <?php include('../_flush.php'); ?>
     <div id="body">
 
         <ol class="breadcrumb">
@@ -85,11 +85,11 @@ only_loggedin($conn);
                 <div class="panel-body">
                     <h4>Τύπος Πιστοποιητικού</h4>
                     <form>
-                        <select class="form-control status" style="width: 40%">
+                        <select class="form-control status" style="width: 40%" id="selectType">
                             <option disabled selected value style="display:none"> -- Επιλέξτε Τύπο -- </option>
-                            <option>Ασφαλιστική Ικανότητα</option>
-                            <option>Αναπηρίας </option>
-                            <option>κλπ</option>
+                            <option value="1">Ασφαλιστική Ικανότητα</option>
+                            <option value="2">Αναπηρίας </option>
+                            <option value="3">κλπ</option>
                         </select>
                         <br>
                         <h4>Στοιχεία Ασφαλισμένου</h4>
@@ -127,19 +127,35 @@ only_loggedin($conn);
                                 <p class="col-md-8"><?= $user['phone']?></p>
                             </div>
                         </div>
-
-                        <div class="pull-right">
-                            <button id = "btn1" type="button" class="btn btn-primary btn-lg" disabled><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Κατέβασμα ως pdf</button>
-                            <button id = "btn2" type="button" class="btn btn-default btn-lg" disabled><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Αποστολή στο email μου</button>
-                            <a href="#" id = "btn3" onclick="print();" class="btn btn-info btn-lg" disabled><span class="glyphicon glyphicon-print" aria-hidden="true"</span> Εκτύπωση</a>
-                        </div>
                     </form>
                 </div>
             </div>
         </div>
+        <div id="results" style="padding: 10px;display: none;">
+            <div class="panel panel-default" style="" id="apotelesmata">
+              <div class="panel-heading">Αποτελέσματα</div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac ipsum lacus. Integer rutrum mauris velit, non accumsan dolor congue ac. Aenean gravida diam neque, at cursus nisl placerat a.</p>
+                <h5>Τελικό πορό σύνταξης: 8569 ευρώ</h5>
+                <div class="pull-right">
+                    <button id = "btn1" type="button" class="btn btn-primary btn-lg" disabled><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Κατέβασμα ως pdf</button>
+                    <button id = "btn2" type="button" class="btn btn-default btn-lg" disabled><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Αποστολή στο email μου</button>
+                    <a href="#" id = "btn3" onclick="print();" class="btn btn-info btn-lg" disabled><span class="glyphicon glyphicon-print" aria-hidden="true"</span> Εκτύπωση</a>
+                </div>
+              </div>
+            </div>
+        </div>
     </div>
-    <?php include('./_footer.php'); ?>
+    <?php include('../_footer.php'); ?>
     <script>
+        $("#selectType").change(function() {
+            if($("#selectType").val()=="1" ){
+                $("#results").show();    
+            }else{
+                $("#results").hide();    
+            }
+        });
+
         $(document).on('click', '.yamm .dropdown-menu', function(e) {
             e.stopPropagation()
         });
