@@ -1,6 +1,5 @@
 <?php 
-	include ('db_connection.php');
-	session_start();
+	include_once('_session.php');
 	$action = $_GET['a'];
 
 
@@ -57,33 +56,39 @@
 	}
 
 	function update($conn, $firstName, $lastName, $email, $password, $passwordConfirmation, $birthday, $amka, $address, $phone){
-		if($firstName==''||$lastName==''||$email==''||$birthday==''||$amka==''){
-			$_SESSION['flush']['error'] = 'Παρακαλώ συμπληρώστε όλα τα πεδία!';
+		global $user;
+		if($email==''||$address==''){
+			$_SESSION['flush']['error'] = 'Παρακαλώ συμπληρώστε τα απαραίτητα πεδία!';
 			return false;
 		}
-		if($password!='' and $password==$passwordConfirmation){
+		if($password!='' and $password!=$passwordConfirmation){
 			$_SESSION['flush']['error'] = 'Οι κωδικοί δεν ταιριάζουν!';
 			return false;
 		}
-		$res = $conn->prepare("SELECT id FROM users WHERE email = :email LIMIT 1");
-		$res->execute(array(':email' => $email ));
-		if ($res->rowCount() == 1){
-			$_SESSION['flush']['error'] = 'Αυτό το email υπάρχει ήδη!';
-			return false;
+		if ($password!='') {
+			$res = $conn->prepare("SELECT id FROM users WHERE id = :id AND password = :password LIMIT 1");
+			$res->execute(array(':id' => $id, ':password' => hash('sha256', $password) ));
+			if ($res->rowCount() == 0){
+				$_SESSION['flush']['error'] = 'O υπάρχων κωδικός είναι λάθος!';
+				return false;
+			}	
 		}
-		$res = $conn->prepare("SELECT id FROM users WHERE amka = :amka LIMIT 1");
-		$res->execute(array(':amka' => $amka ));
-		if ($res->rowCount() == 1){
-			$_SESSION['flush']['error'] = 'Αυτό το ΑΜΚΑ υπάρχει ήδη!';
-			return false;
+
+		if($user["email"] != $email){
+			$res = $conn->prepare("SELECT id FROM users WHERE email = :email LIMIT 1");
+			$res->execute(array(':email' => $email ));
+			if ($res->rowCount() == 1){
+				$_SESSION['flush']['error'] = 'Αυτό το email υπάρχει ήδη!';
+				return false;
+			}
 		}
 
 		if($password!=''){
-			$res = $conn->prepare("UPDATE users (firstName, lastName, email, password, amka, address, phone) VALUES (:fName, :lName, :email, :password, :birthday, :amka, :address, :phone) WHERE id = :id");
-			$res->execute(array(':id' => $_SESSION["user_id"],':email' => $email, ':password' => hash('sha256', $password), ':fName' => $firstName, ':lName' => $lastName, ':amka' => $amka, ':address' => $address, ':phone' => $phone, ':birthday' => $birthday));
+			$res = $conn->prepare("UPDATE users  SET email = :email, password = :password, address = :address, phone = :phone WHERE id = :id");
+			$res->execute(array(':id' => $user["id"], ':email' => $email, ':password' => hash('sha256', $password), ':address' => $address, ':phone' => $phone));
 		}else{
-			$res = $conn->prepare("UPDATE users (firstName, lastName, email, amka, address, phone) VALUES (:fName, :lName, :email, :birthday, :amka, :address, :phone) WHERE id = :id");
-			$res->execute(array(':id' => $_SESSION["user_id"],':email' => $email, ':fName' => $firstName, ':lName' => $lastName, ':amka' => $amka, ':address' => $address, ':phone' => $phone, ':birthday' => $birthday));
+			$res = $conn->prepare("UPDATE users  SET email = :email, address = :address, phone = :phone WHERE id = :id");
+			$res->execute(array(':id' => $user["id"] ,':email' => $email, ':address' => $address, ':phone' => $phone));
 		}
 		if ($res->rowCount() == 1){
 			return true;
@@ -128,7 +133,7 @@
 			die();
 		}
 	}elseif ($action == "update" && $_SERVER['REQUEST_METHOD'] == 'POST') {
-		if (isset($_SESSION["user_id"])){
+		if (isset($user)){
 			if (update($conn, $_POST['firstName'], $_POST['lastName'], $_POST['email'], $_POST['password'], $_POST['passwordConfirmation'], $_POST['birthday'], $_POST['amka'], $_POST['address'], $_POST['phone'])){
 				$_SESSION['flush']['success'] = "Επιτυχής αποθήκευση!";
 			}

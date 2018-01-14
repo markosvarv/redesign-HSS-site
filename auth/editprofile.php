@@ -13,7 +13,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/assets/img/favico.ico">
 
-    <title>IKA</title>
+    <title>IKA | Επεξεργασία Λογαριασμού</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -41,8 +41,7 @@
       <?php include('../_menu.php'); ?>
       <?php include('../_flush.php'); ?>
       <ul class="breadcrumb">
-        <li><a href="#">Αρχική Σελίδα</a></li>
-        <li><a href="#">Σύνδεση</a></li>
+        <li><a href="/home.php">Αρχική Σελίδα</a></li>
         <li>Επεξεργασία Προφίλ</li>
       </ul>
       <h1>Επεξεργασία Προφίλ</h1>
@@ -60,25 +59,25 @@
                                 <div class="form-group">
                                     <label for="inputEmail" class="col-sm-2 control-label">Email</label>
                                     <div class="col-sm-8">
-                                        <input type="email" class="form-control" id="inputEmail" value=<?= $user['email']?>>
+                                        <input type="email" class="form-control" id="inputEmail" value="<?= $user['email']?>" name="email"  required>
                                     </div>
                                 </div>
                               <div class="form-group">
                                     <label for="OldPassword" class="col-sm-2 control-label">Παλιός Κωδικός</label>
                                     <div class="col-sm-8">
-                                        <input type="password" class="form-control" id="OldPassword" placeholder="Συμπληρώστε τον Παλιό σας Κωδικό..">
+                                        <input type="password" class="form-control" id="OldPassword" placeholder="Συμπληρώστε τον Παλιό σας Κωδικό.." name="oldPassword">
                                     </div>
                                 </div>
                               <div class="form-group">
                                     <label for="NewPassword" class="col-sm-2 control-label">Νέος Κωδικός</label>
                                     <div class="col-sm-8">
-                                        <input type="password" class="form-control" id="NewPassword" placeholder="Επιλέξτε Νέο Κωδικό..">
+                                        <input type="password" name="password" class="form-control" id="NewPassword" placeholder="Επιλέξτε Νέο Κωδικό..">
                                     </div>
                                 </div>
                               <div class="form-group">
                                     <label for="ConPassword" class="col-sm-2 control-label">Επαλήθευση Νέου Κωδικού</label>
                                     <div class="col-sm-8">
-                                        <input type="password" class="form-control" id="ConPassword" placeholder="Επαναλάβετε τον Νέο σας Κωδικό..">
+                                        <input type="password" name="passwordConfirmation" class="form-control" id="ConPassword" placeholder="Επαναλάβετε τον Νέο σας Κωδικό..">
                                     </div>
                                 </div>
                             </div>
@@ -88,39 +87,40 @@
                         <div class="form-group">
                             <label for="FirstName" class="col-sm-2 control-label">Όνομα</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="FirstName" value=<?= $user['firstName']?> readonly>
+                                <input type="text" class="form-control" id="FirstName" value="<?= $user['firstName']?>" readonly>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="LastName" class="col-sm-2 control-label">Επίθετο</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="LastName" value=<?= $user['lastName'] ?> readonly>
+                                <input type="text" class="form-control" id="LastName" value="<?= $user['lastName'] ?>" readonly>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="Date" class="col-sm-2 control-label">Ημερομηνία Γέννησης</label>
                             <div class="col-sm-8">
-                                <input type="date" id="Date" class ="form"value=<?= $user['birthday']?> readonly>
+                                <input type="date" id="Date" class ="form" value="<?= $user['birthday']?>" readonly>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputHouse" class="col-sm-2 control-label">Κατοικία</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="inputHouse" value=<?= $user['address'] ?>>
+                                <input type="text" class="form-control" id="inputHouse" value="<?= $user['address'] ?>" name="address" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputTelephone" class="col-sm-2 control-label">Τηλέφωνο</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="inputTelephone" value=<?= $user['phone']?>>
+                                <input type="text" class="form-control" id="inputTelephone" value="<?= $user['phone']?>"" name="phone">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="AMKA" class="col-sm-2 control-label">ΑΜΚΑ</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="AMKA" value=<?= $user['amka']?> readonly>
+                                <input type="text" class="form-control" id="AMKA" value="<?= $user['amka']?>" readonly>
                             </div>
                         </div>
+                        <br/>
                         <div class="form-group">
                             <div class="col-md-4 pull-right">
                                 <button type="submit" class="btn btn-primary btn-lg">Αποθήκευση Στοιχείων</button>
