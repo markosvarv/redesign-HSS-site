@@ -10,6 +10,13 @@
   }
 ?>
 
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="./assets/css/justified-nav.css" rel="stylesheet">
+<link href="./assets/css/theme.css" rel="stylesheet">
+<link href="./assets/css/yamm.css" rel="stylesheet">
+<link href="./assets/css/app.css" rel="stylesheet">
+
 <div class="right-tools pull-right">
   <span id="access">Μέγεθος Γραμμάτων <input  type="range" min="1" max="2" value="1" step="0.5" onchange="$('#body').attr('style', 'font-size: ' + (this.value*100).toString() + '% !important');" ></span>
   <span id="access">Φωνητική Λειτουργία <span style="cursor: pointer;" class="glyphicon glyphicon-headphones"></span></span>
@@ -47,19 +54,29 @@
                     <ul class="media-list">
                       <li class="media">
                         <div class="media-body">
-
-                          <h4 class="media-heading"><a href="/">Ηλεκτρονικές Υπηρεσίες</a></h4>Όπως: Υπολογισμός Ενσήμων, ..., ....
-                        </div>
+                            <h4>Ηλεκτρονικές Υπηρεσίες</h4>
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <h5 class="media-heading"><a href="certificate.php">Έκδοση Πιστοποιητικού</a></h5>
+                                </li>
+                                <li>
+                                    <h5 class="media-heading"><a href="">Εξέλιξη Αιτήματος</a></h5>
+                                </li>
+                                <li>
+                                    <h5 class="media-heading"><a href="/">Υπηρεσίες προς Α.Μ.Ε.Α.</a></h5>
+                                </li>
+                            </ul>
+                        <div>
                       </li>
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Δικαιολογητικά</a></h4>Όπως: Εκδοση ΑΜΚΑ, ..., ....
+                          <h4 class="media-heading"><a href="/">Πληροφορίες / Δικαιολογητικά</a></h4>Όπως: Εκδοση ΑΜΚΑ, ..., ....
                         </div>
                       </li>
                     </ul>
                   </div>
                   <div class="col-md-6">
-                    <h4>Δημοφιλέις Εργασίες</h4>
+                    <h4>Δημοφιλείς Εργασίες</h4>
                     <ul style="list-style-type: none;">
                       <li>
                         <h5 class="media-heading"><a href="/">Νέος Ασφαλισμένος</a></h5>
@@ -106,18 +123,33 @@
                     <ul class="media-list">
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Ηλεκτρονικές Υπηρεσίες</a></h4>Όπως: Καταχώριση Υπαλλήλων, ..., ....
+<!--                          <h4 class="media-heading"><a href="/">Ηλεκτρονικές Υπηρεσίες</a></h4>Όπως: Καταχώριση Υπαλλήλων, ..., ....-->
+                            <h4>Ηλεκτρονικές Υπηρεσίες</h4>
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <h5 class="media-heading"><a href="request.php">Υποβολή Ενσήμων</a></h5>
+                                </li>
+                                <li>
+                                    <h5 class="media-heading"><a href="/">Καταχώρηση Υπαλλήλων</a></h5>
+                                </li>
+                                <li>
+                                    <h5 class="media-heading"><a href="/">Υποβολή Α.Π.Δ.</a></h5>
+                                </li>
+                                <li>
+                                    <h5 class="media-heading"><a href="/">Έκδοση Ατομικού Λογαριασμού Ασφάλισης</a></h5>
+                                </li>
+                            </ul>
                         </div>
                       </li>
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Δικαιολογητικά</a></h4>Όπως: Ασφάλιση Υπαλλήλων, ..., ....
+                          <h4 class="media-heading"><a href="/">Πληροφορίες / Δικαιολογητικά</a></h4>Όπως: Ασφάλιση Υπαλλήλων, ..., ....
                         </div>
                       </li>
                     </ul>
                   </div>
                   <div class="col-md-6">
-                    <h4>Δημοφιλέις Εργασίες</h4>
+                    <h4>Δημοφιλείς Εργασίες</h4>
                     <ul style="list-style-type: none;">
                       <li>
                         <h5 class="media-heading"><a href="/">Καταχώριση Υπαλλήλων</a></h5>
@@ -158,18 +190,33 @@
                     <ul class="media-list">
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Ηλεκτρονικές Υπηρεσίες</a></h4>Όπως: Υπολογισμός Σύνταξης, ..., ....
+<!--                          <h4 class="media-heading"><a href="/">Ηλεκτρονικές Υπηρεσίες</a></h4>Όπως: Υπολογισμός Σύνταξης, ..., ....-->
+                            <h4>Ηλεκτρονικές Υπηρεσίες</h4>
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <h5 class="media-heading"><a href="ypologismos_syntaksis.php">Υπολογισμός Σύνταξης</a></h5>
+                                </li>
+                                <li>
+                                    <h5 class="media-heading"><a href="/">Βεβαίωση Συντάξεων</a></h5>
+                                </li>
+                                <li>
+                                    <h5 class="media-heading"><a href="/">Ενημερωτικό Σημείωμα Συντάξεων</a></h5>
+                                </li>
+                                <li>
+                                    <h5 class="media-heading"><a href="/">Πορείας Αίτησης Συνταξιοδότησης</a></h5>
+                                </li>
+                            </ul>
                         </div>
                       </li>
                       <li class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="/">Δικαιολογητικά</a></h4>Όπως: Δικαιολογητικά χορήγησης σύνταξης, ..., ....
+                          <h4 class="media-heading"><a href="/">Πληροφορίες / Δικαιολογητικά</a></h4>Όπως: Δικαιολογητικά χορήγησης σύνταξης, Οδηγός Θεμελίωσης Συνταξιοδοτικού Δικαιώματος, ....
                         </div>
                       </li>
                     </ul>
                   </div>
                   <div class="col-md-6">
-                    <h4>Δημοφιλέις Εργασίες</h4>
+                    <h4>Δημοφιλείς Εργασίες</h4>
                     <ul style="list-style-type: none;">
                       <li>
                         <h5 class="media-heading"><a href="/ypologismos_syntaksis.php">Υπολογισμός Σύνταξης</a></h5>
