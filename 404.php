@@ -40,9 +40,21 @@
       <?php include('./_flush.php'); ?>
       <div id="body">
           
-          <h1>Template</h1>
-          <span>Edo vazeis oti thes</span>
-          <!-- edo vazeis oti thes -->
+          <div class="jumbotron">
+            <h2>Αυτή η λειτουργία δεν υποστηρίζεται ακόμη! Περικοπές...</h2>
+            <br/>
+            <center><img src="http://gleanings.org/wp-content/uploads/2016/07/Under-Construction.png"></center>
+            <br/>
+            <form class="form-horizontal" role="search" action="/faq.php">
+                <div class="input-group">
+                  <input class="form-control input-lg" placeholder="Ψάξε εδώ τίποτα άλλο!" name="q" type="text" value="<?= $_GET['q'] ?>">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                  </div>
+                </div>
+            </form>
+            <!-- <p><a class="btn btn-lg btn-info" href="#" role="button">Get started today</a></p> -->
+          </div>
 
       </div>
       <?php include('./_footer.php'); ?>
