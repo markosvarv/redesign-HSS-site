@@ -66,7 +66,7 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac ipsum lacus. Integer rutrum mauris velit, non accumsan dolor congue ac. Aenean gravida diam neque, at cursus nisl placerat a. Integer sit amet risus congue, fringilla odio vel, feugiat leo. Donec rhoncus mauris ac velit pulvinar, non efficitur ipsum consequat</p>
 		<?php if (!isset($user)) : ?>
 			<div class="jumbotron" style="padding: 20px;">
-				<p class="lead" style=""><span class="glyphicon glyphicon-info-sign"></span> <a href="/login.php?ref=ypologismos_syntaksis.php">	Συνδέσου και υπολόγισε την συνταξή σου αυτόματα.</a></p>
+				<p class="lead" style=""><span class="glyphicon glyphicon-info-sign"></span> <a href="/auth/login.php">	Συνδέσου και υπολόγισε την συνταξή σου αυτόματα.</a></p>
 			</div>
       	<?php endif; ?>
 
