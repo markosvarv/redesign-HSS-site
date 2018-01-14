@@ -99,10 +99,11 @@
 		session_unset();
 	}
 
-	// if($action == "login" && $_SERVER['REQUEST_METHOD'] == 'POST'){
-	// 	if (login($conn, $_POST['email'], $_POST['password'])){
-	if($action == "login" && $_SERVER['REQUEST_METHOD'] == 'GET'){
-		if (login($conn, "spyrosavl1@gmail.com", "123456")){
+	if($action == "login" && $_SERVER['REQUEST_METHOD'] == 'POST'){
+		foreach($_POST as $p_key => $p_value){
+			$_SESSION["login_".$p_key] = $p_value;
+		}
+		if (login($conn, $_POST['email'], $_POST['password'])){
 			if(isset($_SESSION['last_page'])){
 				header("Location: ".$_SESSION['last_page']);
 			}else{

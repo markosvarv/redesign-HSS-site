@@ -52,15 +52,13 @@
 	// 	}
 	// }
 
-	// if($action == "add_monthly_insurance" && $_SERVER['REQUEST_METHOD'] == 'POST'){
-	// 	if (add_monthly_insurance($conn, $user['id'], $_POST['employee_amka'], $_POST['$salary'], $_POST['$year'], $_POST['$month'])){
-	if($action == "add_monthly_insurance" && $_SERVER['REQUEST_METHOD'] == 'GET'){
-		if (add_monthly_insurance($conn, $user['id'], "578277278", "1000", "2017", "05")){
+	if($action == "add_monthly_insurance" && $_SERVER['REQUEST_METHOD'] == 'POST'){
+	 	if (add_monthly_insurance($conn, $user['id'], $_POST['employee_amka'], $_POST['salary'], $_POST['year'], $_POST['month'])){
 			$_SESSION['flush']['success'] = 'Η ασφάλιση προστέθηκε!';
-			header("Location: /home.php");
+			header("Location: /eservices/request.php");
 			die();
 		}else{
-			header("Location: /home.php");
+			header("Location: /eservices/request.php");
 			die();
 		}
 

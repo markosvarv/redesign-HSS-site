@@ -1,3 +1,5 @@
+<?php include('_session.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -45,7 +47,7 @@
       <div class="registration_cont" id="body">
         <!-- <div class="row">
           <div class="link"> -->
-            <a style="float: right; font-size: 18px; margin-top: 5px;" href="connection.php">Έχετε ήδη Λογαριασμό; </a>
+            <a style="float: right; font-size: 18px; margin-top: 5px;" href="/auth/login.php">Έχετε ήδη Λογαριασμό; </a>
          <!--  </div>
         </div> -->
         <h1>Εγγραφή</h1>
