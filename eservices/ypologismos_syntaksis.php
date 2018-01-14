@@ -244,7 +244,7 @@
 						  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac ipsum lacus. Integer rutrum mauris velit, non accumsan dolor congue ac. Aenean gravida diam neque, at cursus nisl placerat a.</p>
 						  	<h5>Τελικό πορό σύνταξης: 8569 ευρώ</h5>
 						  	<a style="float: right; margin-left: 15px;" href="#" onclick="print();" class="btn btn-primary">Εκτύπωση</a>
-						  	<a style="float: right;" href="/login.php" class="btn btn-default">Αποθήκευση Στοιχείων στον λογαριασμό μου</a>
+						  	<a style="float: right;" href="/404.php" class="btn btn-default">Αποθήκευση Στοιχείων στον λογαριασμό μου</a>
 						  </div>
 						</div>
 					</div>
