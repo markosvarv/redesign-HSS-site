@@ -43,7 +43,7 @@
           <div class="jumbotron">
             <h2>Αυτή η λειτουργία δεν υποστηρίζεται ακόμη! Περικοπές...</h2>
             <br/>
-            <center><img src="http://gleanings.org/wp-content/uploads/2016/07/Under-Construction.png"></center>
+            <center><img width="100%" src="http://gleanings.org/wp-content/uploads/2016/07/Under-Construction.png"></center>
             <br/>
             <form class="form-horizontal" role="search" action="/faq.php">
                 <div class="input-group">
